@@ -27,16 +27,16 @@ const AppHeader = () => {
                   <NavLink href="/components/">Components</NavLink>
                 </NavItem> */}
                 <NavItem>
-                  <NavLink href="#">HOME</NavLink>
+                  <NavLink href="/">HOME</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">ROOMS&RATES</NavLink>
+                  <NavLink href="/rooms&rates">ROOMS&RATES</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">FACILITIES</NavLink>
+                  <NavLink href="/facilities">FACILITIES</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">CONTACT US</NavLink>
+                  <NavLink href="/contactUs">CONTACT US</NavLink>
                 </NavItem>
                 {/* <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
