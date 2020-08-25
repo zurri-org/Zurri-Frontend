@@ -2,10 +2,10 @@ import { applyMiddleware, compose, createStore } from "redux";
 import createRootReducer from "../reducers";
 import { createBrowserHistory } from "history";
 import { routerMiddleware } from "connected-react-router";
-import { createLogger } from "redux-logger";
+import logger from "redux-logger";
 
 export const history = createBrowserHistory();
-const middlewares = [routerMiddleware(history), createLogger];
+const middlewares = [routerMiddleware(history), logger];
 
 const composeEnhancers =
     process.env.NODE_ENV !== "production" &&

@@ -1,58 +1,38 @@
-import React, {useState} from "react";
+import React from "react";
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
+  NavDropdown,
   Nav,
-  NavItem,
-  NavLink,
-} from "reactstrap";
+} from "react-bootstrap";
 
 const AppHeader = () => {
-      const [isOpen, setIsOpen] = useState(false);
-
-      const toggle = () => setIsOpen(!isOpen);
     return (
       <>
-        <div>
-          <Navbar color="faded" light expand="md">
-            <NavbarBrand href="/">
-              Logo
-            </NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                {/* <NavItem>
-                  <NavLink href="/components/">Components</NavLink>
-                </NavItem> */}
-                <NavItem>
-                  <NavLink href="/">HOME</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/rooms&rates">ROOMS&RATES</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/facilities">FACILITIES</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/contactUs">CONTACT US</NavLink>
-                </NavItem>
-                {/* <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    Options
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Option 1</DropdownItem>
-                    <DropdownItem>Option 2</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Reset</DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown> */}
-              </Nav>
-            </Collapse>
-          </Navbar>
-        </div>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Navbar.Brand href="#home">Logo</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link href="#features">HOME</Nav.Link>
+              <Nav.Link href="#pricing">ROOMS&RATES</Nav.Link>
+              <Nav.Link href="#features">FACILITIES</Nav.Link>
+              <Nav.Link href="#features">CONTACTUS</Nav.Link>
+              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </>
     );
 }
