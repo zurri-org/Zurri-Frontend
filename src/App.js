@@ -1,9 +1,11 @@
 import React from "react";
 import AppHeader from "./components/NavBar";
-import { Container } from "reactstrap";
+import { Provider } from "react-redux";
+import { ConnectedRouter } from "connected-react-router";
+import store, { history } from "./store";
+import App from "./components";
 
-
-function App() {
+const App = () => {
   return (
     <>
       <AppHeader />
