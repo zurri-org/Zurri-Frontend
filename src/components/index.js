@@ -1,10 +1,9 @@
 import React, { Component, Suspense, lazy } from "react";
-import { withRouter } from "react-router";
 import { Router, Route, Switch } from "react-router-dom";
 import { history } from "../store";
 import AppHeader from "./NavBar";
-const HomePage = withRouter(lazy(() => import("./views/homepage")));
-const Facilities = withRouter(lazy(() => import("./views/facilities")));
+const HomePage = lazy(() => import("./views/homepage"));
+const Facilities = lazy(() => import("./views/facilities"));
 
 class MainApp extends Component {
     render() {
@@ -12,7 +11,7 @@ class MainApp extends Component {
             <>
                 <AppHeader />
                 <Suspense fallback={
-                    <div>Loading....</div> 
+                    <div>Loading...</div> 
                 }>
                     <Switch>
                         <Router history={history}>
