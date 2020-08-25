@@ -7,11 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 } from "reactstrap";
 
 const AppHeader = () => {
@@ -22,7 +17,9 @@ const AppHeader = () => {
       <>
         <div>
           <Navbar color="faded" light expand="md">
-            <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <NavbarBrand href="/">
+              Logo
+            </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
