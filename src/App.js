@@ -3,13 +3,15 @@ import AppHeader from "./components/NavBar";
 import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
 import store, { history } from "./store";
-import App from "./components";
+import MainApp from "./components";
 
 const App = () => {
   return (
-    <>
-      <AppHeader />
-    </>
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <MainApp/>
+      </ConnectedRouter>
+    </Provider>
   );
 }
 
