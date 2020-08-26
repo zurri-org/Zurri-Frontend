@@ -1,14 +1,14 @@
 import React from "react";
 import {
   Navbar,
-  NavDropdown,
+  // NavDropdown,
   Nav,
 } from "react-bootstrap";
 
 const AppHeader = () => {
     return (
       <>
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" variant="light">
           <Navbar.Brand href="#home">Logo</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -17,7 +17,7 @@ const AppHeader = () => {
               <Nav.Link href="#pricing">ROOMS&RATES</Nav.Link>
               <Nav.Link href="#features">FACILITIES</Nav.Link>
               <Nav.Link href="#features">CONTACTUS</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -29,7 +29,7 @@ const AppHeader = () => {
                 <NavDropdown.Item href="#action/3.4">
                   Separated link
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
