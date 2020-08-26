@@ -1,0 +1,46 @@
+/* -----------App header css---------- */
+.navbar-custom {
+    height: 15vh
+}
+.font-12 {
+    font-size: 12px !important;
+}
+.font-13 {
+    font-size: 13px !important;
+}
+.font-14 {
+    font-size: 14px !important;
+}
+.input-icon-custom, .search-input {
+    background-color: transparent;
+    border-color: aliceblue;
+}
+.input-group-custom {
+    width: 7rem;
+    border-color: aliceblue;
+}
+.btn-custom {
+    margin: auto;
+    height: 30px;
+}
+.input-group-custom>.form-control {
+    width: 7rem;
+}
+.fa-search{
+    cursor: pointer;
+}
+
+.custom-purple {
+    background-color: #36348A;
+    border-color: white;
+}
+.btn-holder> .btn-custom:nth-child(2):hover {
+    color: #fff;
+    background-color: #36348A;
+    border-color: #fff;
+}
+.btn-holder> .btn-custom:nth-child(2) {
+    color: #36348A;
+    background-color: #fff;
+    border-color: #36348A;
+}

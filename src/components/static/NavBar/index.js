@@ -3,33 +3,63 @@ import {
   Navbar,
   // NavDropdown,
   Nav,
+  InputGroup,
+  Form,
+  FormControl,
+  Image,
+  Button
 } from "react-bootstrap";
+import imageLogo from "../../../assets/img/logo.JPG";
 
 const AppHeader = () => {
     return (
       <>
-        <Navbar collapseOnSelect expand="lg" variant="light">
-          <Navbar.Brand href="#home">Logo</Navbar.Brand>
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          variant="light"
+          className="navbar-custom"
+        >
+          <Navbar.Brand href="/">
+            <Image src={imageLogo} height="50px" className="ml-4 mt-auto mb-auto" />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto">
-              <Nav.Link href="#features">HOME</Nav.Link>
-              <Nav.Link href="#pricing">ROOMS&RATES</Nav.Link>
-              <Nav.Link href="#features">FACILITIES</Nav.Link>
-              <Nav.Link href="#features">CONTACTUS</Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
+            <Nav className="ml-auto mr-4 nav-bar-custom font-14">
+              <Nav.Link href="/">HOME</Nav.Link>
+              <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
+              <Nav.Link href="/facilities">FACILITIES</Nav.Link>
+              <Nav.Link href="/contactUs">CONTACTUS</Nav.Link>
+              <Form inline className="mr-3 ml-4">
+                <InputGroup size="sm" className="input-group-custom">
+                  <FormControl
+                    className="search-input"
+                    type="text"
+                    placeholder="search"
+                    size="sm"
+                  />
+                  <InputGroup.Append size="sm">
+                    <InputGroup.Text size="sm" className="input-icon-custom">
+                      <i className="fa fa-search" aria-hidden="true"></i>
+                    </InputGroup.Text>
+                  </InputGroup.Append>
+                </InputGroup>
+              </Form>
+              <div className="btn-holder">
+                <Button
+                  size="sm"
+                  className="mr-4 btn-custom font-12 custom-purple"
+                >
+                  SIGN IN
+                </Button>
+                <Button
+                  variant="outline-info"
+                  size="sm"
+                  className="mr-4  btn-custom font-12"
+                >
+                  JOIN
+                </Button>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
