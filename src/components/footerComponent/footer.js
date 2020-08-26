@@ -9,20 +9,15 @@ class Footer extends Component{
         <div>
           <ul>
             <li>&#169; 2020 figma inc. All rights reserved</li>
-            <li><a>Privacy policy</a></li>
-            <li><a>Terms of use</a></li>
-            <li><a>Site map</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Site map</a></li>
           </ul>
           <ul className="image">
             <li><img src={Flogo} alt="fb"/></li>
             <li><img src={Tlogo} alt="twitter"/></li>
-            
-            
           </ul>
-        
         </div>
-          
-
       </footer>
     );
   }
