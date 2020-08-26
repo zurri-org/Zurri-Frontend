@@ -3,6 +3,8 @@ import { Router, Route, Switch } from "react-router-dom";
 import { history } from "../store";
 import AppHeader from "./static/NavBar";
 import AppNavBar from "./static/NavBar/appNavBar";
+import AppHeader from "./NavBar";
+import Footer from "./footerComponent/footer";
 const HomePage = lazy(() => import("./views/homepage"));
 const Facilities = lazy(() => import("./views/facilities"));
 
@@ -22,6 +24,7 @@ class MainApp extends Component {
                         </Router>
                     </Switch>
                 </Suspense>
+                <Footer />
             </>
         )
     }
