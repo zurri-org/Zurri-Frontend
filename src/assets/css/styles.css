@@ -44,3 +44,34 @@
     background-color: #fff;
     border-color: #36348A;
 }
+.dropdown-section> .dropdown> .dropdown-toggle::after{
+    margin-left: 4em;
+}
+
+/* ------------custom css of black nevigation bar---------- */
+.dark-nav-bar> .navbar {
+    height: 13vh;
+    background-color: #242424;
+}
+.dropdown-section> .header{
+    color: white;
+    font-family: Playfair Display SC;
+    margin: auto;
+}
+.dropdown-section> .dropdown>.dropdown-toggle {
+    color: white;
+}
+.navbar-nav> .dropdown-section:nth-child(2) {
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    padding-right: 40px;
+}
+.dark-nav-bar> .navbar> .collapse> .nav-item> .btn {
+    font-size: 15px;
+    font-weight: 500;
+    height: 13vh;
+    width: 11rem;
+    border-radius: 0px;
+    background-color: #666812;
+    border-color: #666812;
+}

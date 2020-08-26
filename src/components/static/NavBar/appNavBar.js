@@ -2,37 +2,72 @@ import React from 'react'
 import {
     Navbar,
     Nav,
-    NavDropdown
+    NavDropdown,
+    NavItem,
+    Button
 } from "react-bootstrap";
 const AppNavBar = () => {
     return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <div className="dark-nav-bar d-none d-lg-block">
+        <Navbar collapseOnSelect expand="lg" variant="dark">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav" className="pr-4">
+            <Nav className="ml-auto">
+              <NavItem className="dropdown-section pr-4">
+                <h5 className="font-14 font-weight-bold header ml-2">CHECK IN:</h5>
+                <NavDropdown title="Fri Jun 5, 2020" id="collasible-nav-dropdown">
+                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#">
+                    Another action
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#">
+                    Something
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Separated link
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </NavItem>
+              <NavItem className="dropdown-section pl-4">
+                <h5 className="font-14 font-weight-bold header ml-2">CHECK OUT:</h5>
+                <NavDropdown title="Fri Jun 5, 2020" id="collasible-nav-dropdown">
+                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#">
+                    Another action
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#">
+                    Something
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Separated link
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </NavItem>
+              <NavItem className="dropdown-section pl-4">
+                <h5 className="font-14 font-weight-bold header ml-2">OCCUPANCY</h5>
+                <NavDropdown title="1 Room: 1 Adult/Room" id="collasible-nav-dropdown">
+                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#">
+                    Another action
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#">
+                    Something
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Separated link
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </NavItem>
+            </Nav>
+            <NavItem>
+              <Button size="lg" className="ml-4 mr-4" variant="primary">CHECK AVAILABILITY</Button>
+            </NavItem>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
     );
 }
 
