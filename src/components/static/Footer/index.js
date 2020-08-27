@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import Flogo from '../../assets/img/fb.png';
-import Tlogo from '../../assets/img/twitter.png';
+import Flogo from '../../../assets/img/fb.png';
+import Tlogo from '../../../assets/img/twitter.png';
 
 class Footer extends Component{
   render(){
@@ -9,9 +9,9 @@ class Footer extends Component{
         <div>
           <ul>
             <li>&#169; 2020 figma inc. All rights reserved</li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Terms of use</a></li>
-            <li><a href="#">Site map</a></li>
+            <li><a href="/">Privacy policy</a></li>
+            <li><a href="/">Terms of use</a></li>
+            <li><a href="/">Site map</a></li>
           </ul>
           <ul className="image">
             <li><img src={Flogo} alt="fb"/></li>
