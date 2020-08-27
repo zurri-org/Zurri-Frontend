@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Jumbotron } from "react-bootstrap";
+import React from 'react'
+import { Container, Jumbotron } from 'react-bootstrap';
 
-const HomePage = () => {
+const Rooms = () => {
     return (
         <Container>
             <Jumbotron>
@@ -13,4 +13,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default Rooms;
