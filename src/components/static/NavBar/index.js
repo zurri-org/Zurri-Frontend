@@ -14,7 +14,7 @@ import imageLogo from "../../../assets/img/logo.JPG";
 import { useEffect } from "react";
 
 const AppHeader = () => {
-  const [scroll, setScroll] = useState(0)
+  const [scroll, setScroll] = useState(1)
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
