@@ -5,7 +5,7 @@ import Tlogo from '../../../assets/img/twitter.png';
 class Footer extends Component{
   render(){
     return(
-      <footer>
+      <footer className="mt-auto">
         <div>
           <ul>
             <li>&#169; 2020 figma inc. All rights reserved</li>
