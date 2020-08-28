@@ -1,8 +1,9 @@
 import React, { Component, Suspense, lazy } from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import { history } from "../store";
-import AppHeader from "./NavBar";
-import Footer from "./footerComponent/footer";
+import AppHeader from "./static/NavBar";
+import AppNavBar from "./static/NavBar/appNavBar";
+import Footer from "./static/Footer";
 const HomePage = lazy(() => import("./views/homepage"));
 const Facilities = lazy(() => import("./views/facilities"));
 
@@ -11,6 +12,7 @@ class MainApp extends Component {
         return (
             <>
                 <AppHeader />
+                <AppNavBar />
                 <Suspense fallback={
                     <div>Loading...</div> 
                 }>
