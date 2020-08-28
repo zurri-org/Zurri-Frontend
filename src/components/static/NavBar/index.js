@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   Nav,
@@ -11,15 +11,26 @@ import {
   NavDropdown
 } from "react-bootstrap";
 import imageLogo from "../../../assets/img/logo.JPG";
+import { useEffect } from "react";
 
 const AppHeader = () => {
+  const [scroll, setScroll] = useState(0)
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY < 100
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck)
+      }
+    })
+  });
     return (
       <>
         <Navbar
           collapseOnSelect
           expand="lg"
           variant="light"
-          className="navbar-custom"
+          className={scroll ? 'navbar-custom fixed-top' : 'navbar-custom fixed-top scrolled-nav'}
         >
           <Navbar.Brand href="/">
             <Image src={imageLogo} height="50px" className="ml-4 mt-auto mb-auto" />

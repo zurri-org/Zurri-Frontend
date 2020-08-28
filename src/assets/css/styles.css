@@ -45,7 +45,13 @@ img {
 
 /* -----------App header css---------- */
 .navbar-custom {
-    height: 15vh
+    height: 100px;
+    background-color: white;
+    -webkit-transition: height .5s, line-height .5s; /* Safari */
+    transition: height .5s, line-height .5s;
+}
+.scrolled-nav {
+    height: 50px;
 }
 .font-12 {
     font-size: 12px !important;
@@ -98,8 +104,11 @@ img {
 
 
 /* ------------custom css of black nevigation bar---------- */
+.dark-nav-bar {
+    margin-top: 100px;
+}
 .dark-nav-bar> .navbar {
-    height: 13vh;
+    height: 85px;
     background-color: #242424;
 }
 .dropdown-section> .header{
@@ -118,7 +127,7 @@ img {
 .dark-nav-bar> .navbar> .collapse> .nav-item> .btn {
     font-size: 15px;
     font-weight: 500;
-    height: 13vh;
+    height: 85px;
     width: 11rem;
     border-radius: 0px;
     background-color: #666812;
