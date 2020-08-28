@@ -6,7 +6,6 @@ import AppNavBar from "./static/NavBar/appNavBar";
 import Footer from "./static/Footer";
 import Rooms from "./views/rooms&rates";
 import CountactUs from "./views/contactus";
-import SideBar from "./static/sideMenu";
 const HomePage = lazy(() => import("./views/homepage"));
 const Facilities = lazy(() => import("./views/facilities"));
 
@@ -14,7 +13,6 @@ class MainApp extends Component {
     render() {
         return (
             <>
-                <SideBar />
                 <AppHeader />
                 <AppNavBar />
                 <Suspense fallback={
