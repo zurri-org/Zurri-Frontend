@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import AboutSection from "./aboutSection";
+import RoomSection from "./roomSection";
+import FacilitiesSection from "./facilitiesSection";
 
 const HomePage = () => {
     return (
@@ -19,6 +21,8 @@ const HomePage = () => {
                 </Container>
             </section>
             <AboutSection />
+            <RoomSection />
+            <FacilitiesSection />
         </>
     )
 }

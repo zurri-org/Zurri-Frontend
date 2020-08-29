@@ -4,7 +4,7 @@ import hotelImage from "../../../assets/img/bg1.jpg";
 
 const AboutSection = () => {
     return (
-        <section className="about-section">
+        <section className="section">
             <Row className="mt-4 mb-8">
                 <h1 className="mt-4 section-header">ABOUT US</h1>
             </Row>
@@ -27,8 +27,8 @@ const AboutSection = () => {
                             <Button size="sm" className="mt-4 custom-btn">Read More</Button>
                         </Container>
                     </Col>
-                    <Col sm={6}>
-                        <Image src={hotelImage} thumbnail />
+                    <Col sm={6} className="mb-4">
+                        <Image src={hotelImage} thumbnail className="mb-4"/>
                     </Col>
                 </Row>
             </Container>
