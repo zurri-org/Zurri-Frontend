@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import AboutSection from "./aboutSection";
 
 const HomePage = () => {
     return (
@@ -17,19 +18,7 @@ const HomePage = () => {
                     </Row>
                 </Container>
             </section>
-            <section>
-                <Container className="mt-3">
-                    <Row>
-                        <Col sm={12}>
-                            <Jumbotron>
-                                <h1>Home Page!</h1>
-                                <p>This is the space for Home page</p>
-                                <p>Its under development </p>
-                            </Jumbotron>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
+            <AboutSection />
         </>
     )
 }

@@ -12,7 +12,7 @@ footer {
     overflow: hidden;
     color: white
 }
-img {
+.image> li> img {
     width: 6%;
     float: left;
     padding-right: 3%;
@@ -26,7 +26,7 @@ img {
         margin-top: 1.5%;
         margin-left: 3%;
     }
-    img {
+    .image> li> img {
         width: 2rem;
         float: left;
         padding-bottom: 30%;
@@ -55,7 +55,7 @@ img {
     transition: height .5s, line-height .5s;
 }
 .scrolled-nav {
-    height: 50px;
+    height: 60px;
 }
 .font-12 {
     font-size: 12px !important;
@@ -65,6 +65,12 @@ img {
 }
 .font-14 {
     font-size: 14px !important;
+}
+.custom-color {
+    color: #47480b;
+}
+.p-color {
+    color: #8b8b2d;
 }
 .input-icon-custom, .search-input {
     background-color: transparent;
@@ -137,6 +143,8 @@ img {
     background-color: #666812;
     border-color: #666812;
 }
+
+/* @media query css */
 @media (max-width: 992px) {
     .navbar-collapse {
         background-color: #f5fbfb;
@@ -183,6 +191,9 @@ img {
         background-color: #666812;
         border-color: black;
     }
+    .landing-section {
+        margin-top: 6rem;
+    }
 
 }
 
@@ -209,4 +220,38 @@ img {
     border-color: white;
     border-radius: 0px;
     font-weight: bold;
+}
+.landing-header> div> h1 {
+    font-size: 48px;
+}
+.section-header {
+    border-bottom: 3px solid #666812;
+    margin: 50px auto;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.about-section {
+    margin-top: -2rem;
+    background: #f7f7f7;
+    padding-top: 30px;
+}
+h1 {
+    font-family: Playfair Display SC;
+}
+.desc> p {
+    font-family: Roboto;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+.custom-btn {
+    background-color: transparent;
+    border-color: #666812;
+    border-radius: 0px;
+    font-weight: bold;
+    color: #666812;
+}
+.custom-btn:hover {
+    color: #fff;
+    background-color: #666812 !important;
+    border-color:  #666812;
 }
