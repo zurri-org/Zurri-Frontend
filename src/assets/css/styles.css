@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 /* -------footer css-------------------------- */
 li {
     list-style-type: none;
@@ -182,15 +186,27 @@ img {
 
 }
 
-/* -----------sideBar css----------- */
-
-.side-custom-bar> .nav {
-    width: 10em;
-    background-color: aliceblue;
-    position: absolute;
-    z-index: 99;
-    display: block;
+/* -----------home page css---------- */
+.landing-section {
+    background-image: url('../img/bg2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+    height: 100vh;
 }
-.side-custom-bar> .nav> .close {
+.landing-header {
+    background-color: hsl(0deg 0% 54% / 30%);
+    color: white;
+    text-align: center;
+}
+.landing-header> div {
+    margin: 15%;
+    text-align: initial;
+}
+.landing-header> div> .btn {
     background-color: transparent;
+    border-color: white;
+    border-radius: 0px;
+    font-weight: bold;
 }
