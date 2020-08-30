@@ -6,6 +6,8 @@ import AppNavBar from "./static/NavBar/appNavBar";
 import Footer from "./static/Footer";
 import Rooms from "./views/rooms&rates";
 import CountactUs from "./views/contactus";
+import Aboutpage from "./views/aboutpage";
+
 const HomePage = lazy(() => import("./views/homepage"));
 const Facilities = lazy(() => import("./views/facilities"));
 
@@ -24,6 +26,8 @@ class MainApp extends Component {
                             <Route exact path="/facilities" component={Facilities} />
                             <Route exact path="/Rooms&Rates" component={Rooms} />
                             <Route exact path="/contactUs" component={CountactUs} />
+                            <Route exact path="/aboutpage" component={Aboutpage} />
+                            
                         </Router>
                     </Switch>
                 </Suspense>

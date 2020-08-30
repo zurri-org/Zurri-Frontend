@@ -1,6 +1,4 @@
 import React,{Component} from 'react';
-import Flogo from '../../../assets/img/fb.png';
-import Tlogo from '../../../assets/img/twitter.png';
 import{
   Container,
   Row,
