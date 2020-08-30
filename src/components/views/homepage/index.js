@@ -1,25 +1,29 @@
 import React from "react";
-import { Container, Jumbotron } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import AboutSection from "./aboutSection";
+import RoomSection from "./roomSection";
+import FacilitiesSection from "./facilitiesSection";
 
 const HomePage = () => {
     return (
-        <Container className="mt-3">
-            <Jumbotron>
-                <h1>Home Page!</h1>
-                <p>This is the space for Home page</p>
-                <p>Its under development please...</p>
-            </Jumbotron>
-            <Jumbotron>
-                <h1>Home Page!</h1>
-                <p>This is the space for Home page</p>
-                <p>Its under development please...</p>
-            </Jumbotron>
-            <Jumbotron>
-                <h1>Home Page!</h1>
-                <p>This is the space for Home page</p>
-                <p>Its under development please...</p>
-            </Jumbotron>
-        </Container>
+        <>
+            <section className="row landing-section">
+                <Container className="mt-3">
+                    <Row>
+                        <Col sm={6} xs={6} className="landing-header">
+                            <div>
+                                <h1 className="mt-4">Sparkle, Aluxury Hotel</h1>
+                                <p className="mt-4">This is the space for Home page</p>
+                                <Button size="md" className="mt-4">BOOK NOW</Button>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <AboutSection />
+            <RoomSection />
+            <FacilitiesSection />
+        </>
     )
 }
 

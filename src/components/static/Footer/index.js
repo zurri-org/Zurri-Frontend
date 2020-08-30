@@ -1,6 +1,4 @@
 import React,{Component} from 'react';
-import Flogo from '../../../assets/img/fb.png';
-import Tlogo from '../../../assets/img/twitter.png';
 import{
   Container,
   Row,
@@ -38,8 +36,6 @@ class Footer extends Component{
           </Col>
           </Row>
           </Container>
-       
-        
         <div className="footer-bottom">
           <p id="copyright" className="text-xs-centre"> &copy; {new Date().getFullYear()} figma inc. All rights reserved</p></div>
       </div>
