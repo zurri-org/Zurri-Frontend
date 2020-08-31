@@ -26,6 +26,28 @@ footer {
 #copyright{
     text-align: center;
 }
+/*.......Aboutpage css....*/
+.background{
+    background: url("../img/bg2.jpg") no-repeat  center center;
+    height:60vh;
+    padding: 10%;
+    width: 100%;
+    
+    
+}
+#mission{
+    text-align: center;
+}
+.profiles img{
+    border-radius: 50%;
+    width:35%;
+    
+
+}
+.profiles li{
+    float: left;
+}
+
 
 
 
