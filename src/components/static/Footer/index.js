@@ -36,8 +36,6 @@ class Footer extends Component{
           </Col>
           </Row>
           </Container>
-       
-        
         <div className="footer-bottom">
           <p id="copyright" className="text-xs-centre"> &copy; {new Date().getFullYear()} figma inc. All rights reserved</p></div>
       </div>
