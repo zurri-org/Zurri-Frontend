@@ -251,3 +251,30 @@ h1 {
     color: white;
     text-align: left;
 }
+
+/* registration input css */
+.custom-input:-ms-input-placeholder {
+    color: #8b8b2d;
+}
+.custom-input::placeholder {
+  color: #8b8b2d;
+  opacity: 1; /* Firefox */
+}
+.custom-input::-ms-input-placeholder { /* Microsoft Edge */
+ color: #8b8b2d;
+}
+.register> .form-group> .custom-input {
+    border: 1px solid #8b8b2d;
+    color: #8b8b2d;
+    border-radius: 1rem;
+}
+.outline-custom-purple:hover {
+    color: #fff;
+    background-color: #36348A;
+    border-color: #fff;
+}
+.outline-custom-purple {
+    color: #36348A;
+    background-color: #fff;
+    border-color: #36348A;
+}
