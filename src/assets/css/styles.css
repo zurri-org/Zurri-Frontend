@@ -278,3 +278,6 @@ h1 {
     background-color: #fff;
     border-color: #36348A;
 }
+.errorInput {
+    border-bottom: 1px solid red !important;
+}
