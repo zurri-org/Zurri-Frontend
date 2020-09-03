@@ -1,12 +1,15 @@
 import React from "react";
-import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { connect } from "react-redux";
+import { Modal, Button, Form, Row, Col } from "react-bootstrap";
+import { register_user_request } from "../../../actions/authActions";
 
 const Register = (props) => {
+  const { register_user_request, ...rest } = props;
   return (
     <Modal
-      {...props}
+      {...rest}
       size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -47,8 +50,7 @@ const Register = (props) => {
               })}
               onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
-                  // props.loginUserRequest(values);
-                  console.log(values);
+                  register_user_request(values);
                 }, 400);
               }}
             >
@@ -61,128 +63,128 @@ const Register = (props) => {
                 handleSubmit,
                 isSubmitting,
               }) => (
-                <Form className="register">
-                  <Form.Group>
-                    <Form.Label className="font-14 p-color">
-                      User Name
+                  <Form className="register">
+                    <Form.Group>
+                      <Form.Label className="font-14 p-color">
+                        User Name
                     </Form.Label>
-                    <Form.Control
-                      size="md"
-                      type="text"
-                      placeholder="Enter full name"
-                      name="userName"
-                      id="userName"
-                      value={values.userName}
-                      required
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      className={
-                        touched.userName && errors.userName
-                          ? "custom-input errorInput"
-                          : "custom-input"
-                      }
-                    />
-                    {touched.userName && errors.userName ? (
-                      <div className="text-danger mt-1 font-12">
-                        {errors.userName}
-                      </div>
-                    ) : null}
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label className="font-14 p-color">
-                      Email address
+                      <Form.Control
+                        size="md"
+                        type="text"
+                        placeholder="Enter full name"
+                        name="userName"
+                        id="userName"
+                        value={values.userName}
+                        required
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={
+                          touched.userName && errors.userName
+                            ? "custom-input errorInput"
+                            : "custom-input"
+                        }
+                      />
+                      {touched.userName && errors.userName ? (
+                        <div className="text-danger mt-1 font-12">
+                          {errors.userName}
+                        </div>
+                      ) : null}
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label className="font-14 p-color">
+                        Email address
                     </Form.Label>
-                    <Form.Control
-                      type="email"
-                      size="md"
-                      placeholder="Enter your email"
-                      className={
-                        touched.email && errors.email
-                          ? "custom-input errorInput"
-                          : "custom-input"
-                      }
-                      id="email"
-                      name="email"
-                      value={values.email}
-                      required
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                    />
-                    {touched.email && errors.email ? (
-                      <div className="text-danger mt-1 font-12">
-                        {errors.email}
-                      </div>
-                    ) : null}
-                    <Form.Text className="custom-color font-12">
-                      We'll never share your email with anyone else.
+                      <Form.Control
+                        type="email"
+                        size="md"
+                        placeholder="Enter your email"
+                        className={
+                          touched.email && errors.email
+                            ? "custom-input errorInput"
+                            : "custom-input"
+                        }
+                        id="email"
+                        name="email"
+                        value={values.email}
+                        required
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                      {touched.email && errors.email ? (
+                        <div className="text-danger mt-1 font-12">
+                          {errors.email}
+                        </div>
+                      ) : null}
+                      <Form.Text className="custom-color font-12">
+                        We'll never share your email with anyone else.
                     </Form.Text>
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label className="font-14 p-color">
-                      Password
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label className="font-14 p-color">
+                        Password
                     </Form.Label>
-                    <Form.Control
-                      type="password"
-                      size="md"
-                      placeholder="Password"
-                      className={
-                        touched.password && errors.password
-                          ? "custom-input errorInput"
-                          : "custom-input"
-                      }
-                      id="password"
-                      name="password"
-                      value={values.password}
-                      required
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                    />
-                    {touched.password && errors.password ? (
-                      <div className="text-danger mt-1 font-12">
-                        {errors.password}
-                      </div>
-                    ) : null}
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label className="font-14 p-color">
-                      Confirm Password
+                      <Form.Control
+                        type="password"
+                        size="md"
+                        placeholder="Password"
+                        className={
+                          touched.password && errors.password
+                            ? "custom-input errorInput"
+                            : "custom-input"
+                        }
+                        id="password"
+                        name="password"
+                        value={values.password}
+                        required
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                      {touched.password && errors.password ? (
+                        <div className="text-danger mt-1 font-12">
+                          {errors.password}
+                        </div>
+                      ) : null}
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label className="font-14 p-color">
+                        Confirm Password
                     </Form.Label>
-                    <Form.Control
-                      type="password"
+                      <Form.Control
+                        type="password"
+                        size="md"
+                        placeholder="Confirm Password"
+                        className={
+                          touched.passwordConfirmation && errors.passwordConfirmation
+                            ? "custom-input errorInput"
+                            : "custom-input"
+                        }
+                        id="passwordConfirmation"
+                        name="passwordConfirmation"
+                        value={values.passwordConfirmation}
+                        required
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                      {touched.passwordConfirmation &&
+                        errors.passwordConfirmation ? (
+                          <div className="text-danger mt-1 font-12">
+                            {errors.passwordConfirmation}
+                          </div>
+                        ) : null}
+                    </Form.Group>
+                    <Button
                       size="md"
-                      placeholder="Confirm Password"
-                      className={
-                        touched.passwordConfirmation && errors.passwordConfirmation
-                          ? "custom-input errorInput"
-                          : "custom-input"
-                      }
-                      id="passwordConfirmation"
-                      name="passwordConfirmation"
-                      value={values.passwordConfirmation}
-                      required
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                    />
-                    {touched.passwordConfirmation &&
-                    errors.passwordConfirmation ? (
-                      <div className="text-danger mt-1 font-12">
-                        {errors.passwordConfirmation}
-                      </div>
-                    ) : null}
-                  </Form.Group>
-                  <Button
-                    size="md"
-                    variant="outline-info"
-                    className="outline-custom-purple float-right"
-                    type="submit"
-                    disabled={isSubmitting}
-                    onClick={handleSubmit}
-                  >
-                    <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
+                      variant="outline-info"
+                      className="outline-custom-purple float-right"
+                      type="submit"
+                      disabled={isSubmitting}
+                      onClick={handleSubmit}
+                    >
+                      <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
                     Register
                   </Button>
-                </Form>
-              )}
+                  </Form>
+                )}
             </Formik>
           </Col>
         </Row>
@@ -198,5 +200,9 @@ const Register = (props) => {
     </Modal>
   );
 };
+const mapStateToProps = ({ Auth }) => {
+  const { auth_error, user_details } = Auth;
+  return { auth_error, user_details };
+}
 
-export default Register;
+export default connect(mapStateToProps, { register_user_request })(Register)
