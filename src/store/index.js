@@ -3,8 +3,9 @@ import createRootReducer from "../reducers";
 import { createBrowserHistory } from "history";
 import { routerMiddleware } from "connected-react-router";
 import logger from "redux-logger";
+import thunk from "redux-thunk";
 export const history = createBrowserHistory();
-const middlewares = [routerMiddleware(history), logger];
+const middlewares = [routerMiddleware(history), logger, thunk];
 
 const composeEnhancers =
     process.env.NODE_ENV !== "production" &&
