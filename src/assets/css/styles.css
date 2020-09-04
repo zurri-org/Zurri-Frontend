@@ -123,8 +123,6 @@ footer {
 /* ------------custom css of black nevigation bar---------- */
 .dark-nav-bar {
     margin-top: 100px;
-}
-.dark-nav-bar> .navbar {
     height: 85px;
     background-color: #242424;
 }
