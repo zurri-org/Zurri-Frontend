@@ -9,7 +9,7 @@ const App = () => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <div className="main-app">
-          <MainApp/>
+          <MainApp />
         </div>
       </ConnectedRouter>
     </Provider>
