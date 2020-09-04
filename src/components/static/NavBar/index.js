@@ -32,12 +32,12 @@ const AppHeader = () => {
           collapseOnSelect
           expand="lg"
           variant="light"
-          className={scroll ? 'navbar-custom fixed-top' : 'navbar-custom fixed-top scrolled-nav'}
+          className={scroll ? "navbar-custom fixed-top" : "navbar-custom fixed-top scrolled-nav"}
         >
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/" className={scroll ? null : "scrolled-nav-items"}>
             <Image src={imageLogo} height="50px" className="ml-4 mt-auto mb-auto" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" className={scroll ? null : "scrolled-nav-items"}/>
           <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto mr-4 nav-bar-custom font-14">
                 <Nav.Link href="/">HOME</Nav.Link>
@@ -77,58 +77,6 @@ const AppHeader = () => {
                   </Button>
                 </div>
               </Nav>
-            <div className="other-links d-block d-lg-none">
-              <Nav className="ml-auto mr-4 nav-bar-custom font-14">
-
-                  <h5 className="font-14 font-weight-bold header ml-2">CHECK IN:</h5>
-                  <NavDropdown title="Fri Jun 5, 2020" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Another action
-                  </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something
-                  </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#">
-                      Separated link
-                  </NavDropdown.Item>
-                  </NavDropdown>
-
-                <h5 className="font-14 font-weight-bold header ml-2">CHECK OUT:</h5>
-                <NavDropdown title="Fri Jun 5, 2020" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-
-                <h5 className="font-14 font-weight-bold header ml-2">OCCUPANCY</h5>
-                <NavDropdown title="1 Room: 1 Adult/Room" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <NavItem>
-                  <Button size="lg" className="ml-4 mr-4 btn-nav" variant="primary">CHECK AVAILABILITY</Button>
-                </NavItem>
-              </Nav>
-            </div>
           </Navbar.Collapse>
         </Navbar>
 

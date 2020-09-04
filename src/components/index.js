@@ -10,7 +10,7 @@ const Facilities = lazy(() => import("./views/facilities"));
 const Aboutpage = lazy(() => import("./views/aboutpage"));
 const ContactUs = lazy(() => import("./views/contactus"));
 const Rooms = lazy(() => import ("./views/rooms&rates"));
-const NotFound = lazy(() => import("./views/notFound"));
+// const NotFound = lazy(() => import("./views/notFound"));
 
 class MainApp extends Component {
     render() {

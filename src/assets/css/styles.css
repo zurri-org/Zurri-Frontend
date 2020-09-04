@@ -59,7 +59,10 @@ footer {
     transition: height .5s, line-height .5s;
 }
 .scrolled-nav {
-    height: 60px;
+    height: 75px;
+}
+.scrolled-nav-items {
+    margin-top: 14px;
 }
 .font-12 {
     font-size: 12px !important;
