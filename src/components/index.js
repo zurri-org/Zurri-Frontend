@@ -5,12 +5,12 @@ import { Jumbotron, Container } from "react-bootstrap";
 import AppHeader from "./static/NavBar";
 import AppNavBar from "./static/NavBar/appNavBar";
 import Footer from "./static/Footer";
-import Rooms from "./views/rooms&rates";
-import CountactUs from "./views/contactus";
-import Aboutpage from "./views/aboutpage";
-
 const HomePage = lazy(() => import("./views/homepage"));
 const Facilities = lazy(() => import("./views/facilities"));
+const Aboutpage = lazy(() => import("./views/aboutpage"));
+const ContactUs = lazy(() => import("./views/contactus"));
+const Rooms = lazy(() => import ("./views/rooms&rates"));
+const NotFound = lazy(() => import("./views/notFound"));
 
 class MainApp extends Component {
     render() {
@@ -31,8 +31,9 @@ class MainApp extends Component {
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/facilities" component={Facilities} />
                             <Route exact path="/Rooms&Rates" component={Rooms} />
-                            <Route exact path="/contactUs" component={CountactUs} />
+                            <Route exact path="/contactUs" component={ContactUs} />
                             <Route exact path="/aboutpage" component={Aboutpage} />
+                            {/* <Route exact path="*" component={NotFound} /> */}
                             
                         </Router>
                     </Switch>
