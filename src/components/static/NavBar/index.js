@@ -44,7 +44,7 @@ const AppHeader = () => {
                 <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
                 <Nav.Link href="/facilities">FACILITIES</Nav.Link>
                 <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
-                <Nav.Link href="/aboutpage">About</Nav.Link>
+                <Nav.Link href="/aboutpage">ABOUT US</Nav.Link>
                 <Form inline className="mr-3 ml-4">
                   <InputGroup size="sm" className="input-group-custom">
                     <FormControl
