@@ -8,11 +8,11 @@ li {
     padding-right: 4%;
 
 }
-a{
-    color:white;
+a {
+    color: white;
     text-decoration: none;
 }
-a:hover{
+a:hover {
     color: gray;
     text-decoration: none;
 }
@@ -23,40 +23,38 @@ footer {
     overflow: hidden;
     color: white;
 }
-#copyright{
+#copyright {
     text-align: center;
 }
 /*.......Aboutpage css....*/
-.background{
-    background: url("../img/bg2.jpg") no-repeat  center center;
-    height:60vh;
+.background {
+    background: url("../img/bg2.jpg") no-repeat center center;
+    height: 60vh;
     padding: 10%;
     width: 100%;
-    
-    
+
+
 }
-#mission{
+#mission {
     text-align: center;
 }
-.profiles img{
+.profiles img {
     border-radius: 50%;
-    width:35%;
-    
+    width: 35%;
+
 
 }
-.profiles li{
+.profiles li {
     float: left;
 }
-
-
 
 
 /* -----------App header css---------- */
 .navbar-custom {
     height: 100px;
     background-color: white;
-    -webkit-transition: height .5s, line-height .5s; /* Safari */
-    transition: height .5s, line-height .5s;
+    -webkit-transition: height 0.5s, line-height 0.5s; /* Safari */
+    transition: height 0.5s, line-height 0.5s;
 }
 .scrolled-nav {
     height: 75px;
@@ -79,7 +77,8 @@ footer {
 .p-color {
     color: #8b8b2d;
 }
-.input-icon-custom, .search-input {
+.input-icon-custom,
+.search-input {
     background-color: transparent;
     border-color: aliceblue;
 }
@@ -91,10 +90,10 @@ footer {
     margin: auto;
     height: 30px;
 }
-.input-group-custom>.form-control {
+.input-group-custom > .form-control {
     width: 7rem;
 }
-.fa-search{
+.fa-search {
     cursor: pointer;
 }
 
@@ -112,10 +111,10 @@ footer {
     background-color: #fff;
     border-color: #36348A;
 }
-.dropdown-section> .dropdown> .dropdown-toggle::after{
-    margin-left: 4em;
+.dropdown-section > .dropdown > .dropdown-toggle::after {
+    margin-left: 2em;
 }
-.navbar-custom> .navbar-brand> img{
+.navbar-custom > .navbar-brand > img {
     width: auto;
 }
 
@@ -123,42 +122,85 @@ footer {
 /* ------------custom css of black nevigation bar---------- */
 .dark-nav-bar {
     margin-top: 100px;
-    height: 85px;
+    height: auto;
     background-color: #242424;
 }
-.dropdown-section> .header{
+.dropdown-section > .header {
     color: white;
     font-family: Playfair Display SC;
     margin: auto;
 }
-.dropdown-section> .dropdown>.dropdown-toggle {
+.dropdown-section > .dropdown > .dropdown-toggle {
     color: white;
 }
-.navbar-nav> .dropdown-section:nth-child(2) {
-    border-right: 2px solid white;
-    border-left: 2px solid white;
-    padding-right: 40px;
+.dropdown-section > .dropdown > .dropdown-menu {
+    background-color: #666627;
+    min-width: 13rem;
 }
-.dark-nav-bar> .navbar> .collapse> .nav-item> .btn {
+.dropdown-section > .dropdown > .dropdown-menu > .dropdown-item {
+    color: white;
+}
+.dropdown-section> .dropdown> .dropdown-menu> .dropdown-item:hover {
+    background-color: #969649;
+}
+.dropdown-section {
+    border-left: 2px solid white;
+}
+.initial {
+    border-left: none;
+}
+.dropdown-section > .dropdown > .btn {
+    border-color: transparent;
+    background-color: transparent;
+}
+.dropdown-section>.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    border-color: transparent;
+    background-color: transparent;
+}
+.dropdown-section> .btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus,
+.btn-primary.focus,
+.btn-primary:focus {
+
+    box-shadow: none;
+}
+.check-btn {
     font-size: 15px;
     font-weight: 500;
     height: 85px;
     width: 11rem;
-    border-radius: 0px;
+    border-radius: 0;
+    background-color: #666812;
+    border-color: #666812;
+    margin-left: 1.5rem;
+}
+.check-btn:hover {
+    background-color: #666812;
+    border-color: #666666;
+}
+.dark-nav-bar > .navbar > .collapse > .nav-item > .btn {
+    font-size: 15px;
+    font-weight: 500;
+    height: 85px;
+    width: 11rem;
+    border-radius: 0;
     background-color: #666812;
     border-color: #666812;
 }
 
 /* @media query css */
-@media (max-width: 992px) {
+@media(max-width: 992px) {
     .navbar-collapse {
         background-color: #f5fbfb;
         box-shadow: 2px 5px 10px #807777;
         display: flex;
         justify-content: center;
     }
-    .navbar-collapse> .navbar-nav {
-        margin-left: 0px !important;
+    .navbar-collapse > .navbar-nav {
+        margin-left: 0 !important;
     }
     .nav-link {
         font-weight: 500;
@@ -168,9 +210,9 @@ footer {
         margin-top: 15px;
         margin-bottom: 15px;
     }
-    .nav-bar-custom> .form-inline {
+    .nav-bar-custom > .form-inline {
         margin-top: 15px;
-        margin-left: 0px !important;
+        margin-left: 0 !important;
     }
     .other-links {
         margin-left: 10rem !important;
@@ -187,19 +229,39 @@ footer {
         font-weight: 500;
         height: 13vh;
         width: 11rem;
-        border-radius: 0px;
+        border-radius: 0;
         background-color: #666812;
         border-color: #666812;
-        margin-left: 0px !important;
+        margin-left: 0 !important;
     }
     .btn-nav:hover {
         background-color: #666812;
         border-color: black;
     }
-    .landing-section {
-        margin-top: 6rem;
+    .check-btn {
+        width: 8rem;
+        margin-left: 5px;
+    }
+    .dropdown-section > .dropdown > .dropdown-toggle::after {
+        margin-left: 0.2em;
+    }
+    .initial {
+        margin-left: 2rem;
     }
 }
+@media(max-width: 575px) {
+    .dropdown-section > .dropdown > .dropdown-toggle::after {
+        margin-left: 1em;
+    }
+    .check-btn {
+        height: 65px;
+        width: 10rem;
+    }
+    .dropdown-section {
+        border-left: none;
+    }
+}
+
 
 /* -----------home page css---------- */
 .landing-section {
@@ -215,17 +277,17 @@ footer {
     color: white;
     text-align: center;
 }
-.landing-header> div {
+.landing-header > div {
     margin: 15%;
     text-align: initial;
 }
-.landing-header> div> .btn {
+.landing-header > div > .btn {
     background-color: transparent;
     border-color: white;
-    border-radius: 0px;
+    border-radius: 0;
     font-weight: bold;
 }
-.landing-header> div> h1 {
+.landing-header > div > h1 {
     font-size: 48px;
 }
 .section-header {
@@ -242,7 +304,7 @@ footer {
 h1 {
     font-family: Playfair Display SC;
 }
-.desc> p {
+.desc > p {
     font-family: Roboto;
     line-height: 24px;
     text-transform: capitalize;
@@ -250,23 +312,23 @@ h1 {
 .custom-btn {
     background-color: transparent;
     border-color: #666812;
-    border-radius: 0px;
+    border-radius: 0;
     font-weight: bold;
     color: #666812;
 }
 .custom-btn:hover {
     color: #fff;
     background-color: #666812 !important;
-    border-color:  #666812;
+    border-color: #666812;
 }
 .rooms-color {
     background-color: #EFEEEE;
-    margin-top: 0px;
+    margin-top: 0;
 }
-.rooms-card> .card-img-top {
+.rooms-card > .card-img-top {
     height: 15rem;
 }
-.rooms-card> .card-body {
+.rooms-card > .card-body {
     font-family: Roboto;
     line-height: 24px;
     text-transform: capitalize;
@@ -280,13 +342,14 @@ h1 {
     color: #8b8b2d;
 }
 .custom-input::placeholder {
-  color: #8b8b2d;
-  opacity: 1; /* Firefox */
+    color: #8b8b2d;
+    opacity: 1; /* Firefox */
 }
-.custom-input::-ms-input-placeholder { /* Microsoft Edge */
- color: #8b8b2d;
+.custom-input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #8b8b2d;
 }
-.register> .form-group> .custom-input {
+.register > .form-group > .custom-input {
     border: 1px solid #8b8b2d;
     color: #8b8b2d;
     border-radius: 1rem;
