@@ -32,8 +32,6 @@ footer {
     height: 60vh;
     padding: 10%;
     width: 100%;
-
-
 }
 #mission {
     text-align: center;
@@ -175,7 +173,7 @@ footer {
     border-radius: 0;
     background-color: #666812;
     border-color: #666812;
-    margin-left: 1.5rem;
+    margin-left: 5.5rem;
 }
 .check-btn:hover {
     background-color: #666812;

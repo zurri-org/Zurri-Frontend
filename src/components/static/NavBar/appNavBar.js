@@ -23,7 +23,7 @@ const AppNavBar = () => {
       </Col>
       <Col xs="6" sm="3" md="3" lg="2">
         <div className="dropdown-section mt-3 ml-3">
-          <h5 className="font-14 font-weight-bold header ml-4">CHECK IN:</h5>
+          <h5 className="font-14 font-weight-bold header ml-4">CHECK OUT:</h5>
           <Dropdown className="ml-2">
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
               Fri Jun 5, 2020
@@ -39,10 +39,10 @@ const AppNavBar = () => {
       </Col>
       <Col xs="6" sm="3" md="3" lg="2">
         <div className="dropdown-section mt-3 ml-4">
-          <h5 className="font-14 font-weight-bold header ml-4">CHECK IN:</h5>
+          <h5 className="font-14 font-weight-bold header ml-4">OCCUPANCY</h5>
           <Dropdown className="ml-2">
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
-              Fri Jun 5, 2020
+              1 Adult/Room
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
