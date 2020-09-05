@@ -12,7 +12,6 @@ import {Jumbotron, Container} from "react-bootstrap";
             <Jumbotron fluid>
             <Container>
                 <h1>Mission</h1>
-                <p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
                 <p>Our mission is to bring tourism to you</p>
                 <p>It is with great pleasure that we offer you this medium through which you can explore any tourist centre of your choice just by swiping your fingers</p>
                 <p>You no longer have to worry about trial and error when it comes to hotel reservations. we bring to you the best hotel listings and other tourist centres</p>
@@ -40,7 +39,7 @@ import {Jumbotron, Container} from "react-bootstrap";
                         </img><br/><p> Mutebinihu</p></li>
                         <li><img src="https://ca.slack-edge.com/T018L7UGPSR-U018ZPC46NQ-34b7043ec961-512">
                         </img><br/><p> Ronnie Lutaro</p></li>
-                        <li><img src="https://ca.slack-edge.com/T018L7UGPSR-U01917JPGJ0-g5a5d163d562-512">
+                        <li><img src="https://ca.slack-edge.com/T018L7UGPSR-U01917JPGJ0-ad62b037cf26-512">
                         </img><br/><p> Ampaire Phemia</p></li>
                         <li><img src="https://ca.slack-edge.com/T018L7UGPSR-U0195E9B8DP-e7088410fca8-512">
                         </img><br/><p> john doe</p></li>

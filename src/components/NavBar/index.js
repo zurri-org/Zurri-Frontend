@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-} from "reactstrap";
+} from "react-bootstrap";
 
 const AppHeader = () => {
       const [isOpen, setIsOpen] = useState(false);

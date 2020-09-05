@@ -12,9 +12,11 @@ import {
 } from "react-bootstrap";
 import imageLogo from "../../../assets/img/logo.JPG";
 import { useEffect } from "react";
+import Login from "../../views/login/login";
 
 const AppHeader = () => {
   const [scroll, setScroll] = useState(1)
+  const [modalShow, setModalShow] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -62,6 +64,7 @@ const AppHeader = () => {
                   <Button
                     size="sm"
                     className="mr-4 btn-custom font-12 custom-purple"
+                    onclick={() => setModalShow(true)}
                   >
                     SIGN IN
                   </Button>
@@ -128,6 +131,7 @@ const AppHeader = () => {
             </div>
           </Navbar.Collapse>
         </Navbar>
+        <Login show={modalShow} onHide={() => setModalShow(false)}/>
       </>
     );
 }

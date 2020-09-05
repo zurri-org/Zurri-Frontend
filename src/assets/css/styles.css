@@ -28,12 +28,19 @@ footer {
 }
 /*.......Aboutpage css....*/
 .background{
-    background: url("../img/bg2.jpg") no-repeat  center center;
+    background: url("../img/bg.jpg") no-repeat  center center;
     height:60vh;
     padding: 10%;
     width: 100%;
-    
-    
+}
+@media only screen and (min-width:600px){
+
+    .background{
+        background: url("../img/bg2.jpg") no-repeat  center center;
+        height:60vh;
+        padding: 10%;
+        width: 100%;
+}
 }
 #mission{
     text-align: center;
@@ -41,6 +48,7 @@ footer {
 .profiles img{
     border-radius: 50%;
     width:35%;
+    margin: auto;
     
 
 }
