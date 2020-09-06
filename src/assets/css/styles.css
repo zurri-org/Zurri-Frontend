@@ -28,6 +28,7 @@ footer {
 }
 /*.......Aboutpage css....*/
 .background{
+<<<<<<< HEAD
     background: url("../img/bg.jpg") no-repeat  center center;
     height:60vh;
     padding: 10%;
@@ -41,6 +42,14 @@ footer {
         padding: 10%;
         width: 100%;
 }
+=======
+    background: url("../img/bg2.jpg") no-repeat  center center;
+    height:60vh;
+    padding: 10%;
+    width: 100%;
+    
+    
+>>>>>>> develop
 }
 #mission{
     text-align: center;
@@ -48,7 +57,10 @@ footer {
 .profiles img{
     border-radius: 50%;
     width:35%;
+<<<<<<< HEAD
     margin: auto;
+=======
+>>>>>>> develop
     
 
 }
@@ -280,4 +292,34 @@ h1 {
     background: #36348A;
     color: white;
     text-align: left;
+}
+
+/* registration input css */
+.custom-input:-ms-input-placeholder {
+    color: #8b8b2d;
+}
+.custom-input::placeholder {
+  color: #8b8b2d;
+  opacity: 1; /* Firefox */
+}
+.custom-input::-ms-input-placeholder { /* Microsoft Edge */
+ color: #8b8b2d;
+}
+.register> .form-group> .custom-input {
+    border: 1px solid #8b8b2d;
+    color: #8b8b2d;
+    border-radius: 1rem;
+}
+.outline-custom-purple:hover {
+    color: #fff;
+    background-color: #36348A;
+    border-color: #fff;
+}
+.outline-custom-purple {
+    color: #36348A;
+    background-color: #fff;
+    border-color: #36348A;
+}
+.errorInput {
+    border-bottom: 1px solid red !important;
 }

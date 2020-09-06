@@ -1,7 +1,7 @@
 import React from "react";
 import { Jumbotron, Container } from "react-bootstrap";
 
-const CountactUs = () => {
+const ContactUs = () => {
     return (
         <Container>
             <Jumbotron>
@@ -13,4 +13,4 @@ const CountactUs = () => {
     )
 }
 
-export default CountactUs;
+export default ContactUs;
