@@ -75,11 +75,6 @@ footer {
 .p-color {
     color: #8b8b2d;
 }
-.input-icon-custom,
-.search-input {
-    background-color: transparent;
-    border-color: aliceblue;
-}
 .input-group-custom {
     width: 7rem;
     border-color: aliceblue;
@@ -208,15 +203,8 @@ footer {
         margin-top: 15px;
         margin-bottom: 15px;
     }
-    .nav-bar-custom > .form-inline {
-        margin-top: 15px;
-        margin-left: 0 !important;
-    }
     .other-links {
         margin-left: 10rem !important;
-    }
-    .search-input {
-        border: 1px solid #c5bdbd;
     }
     .input-icon-custom {
         border-color: #c5bdbd;
