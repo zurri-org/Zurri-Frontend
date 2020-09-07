@@ -1,74 +1,63 @@
 import React from 'react'
 import {
-    Navbar,
-    Nav,
-    NavDropdown,
-    NavItem,
-    Button
+  Row, Col, Dropdown, Button
 } from "react-bootstrap";
 const AppNavBar = () => {
-    return (
-      <div className="dark-nav-bar d-none d-lg-block">
-        <Navbar collapseOnSelect expand="lg" variant="dark">
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" className="pr-4">
-            <Nav className="ml-auto">
-              <NavItem className="dropdown-section pr-4">
-                <h5 className="font-14 font-weight-bold header ml-2">CHECK IN:</h5>
-                <NavDropdown title="Fri Jun 5, 2020" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </NavItem>
-              <NavItem className="dropdown-section pl-4">
-                <h5 className="font-14 font-weight-bold header ml-2">CHECK OUT:</h5>
-                <NavDropdown title="Fri Jun 5, 2020" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </NavItem>
-              <NavItem className="dropdown-section pl-4">
-                <h5 className="font-14 font-weight-bold header ml-2">OCCUPANCY</h5>
-                <NavDropdown title="1 Room: 1 Adult/Room" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </NavItem>
-            </Nav>
-            <NavItem>
-              <Button size="lg" className="ml-4 mr-4" variant="primary">CHECK AVAILABILITY</Button>
-            </NavItem>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
-    );
+  return (
+    <Row className="dark-nav-bar justify-content-md-center">
+      <Col xs="6" sm="3" md="3" lg="2">
+        <div className="dropdown-section mt-3 initial">
+          <h5 className="font-14 font-weight-bold header ml-2">CHECK IN:</h5>
+          <Dropdown>
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+              Fri Jun 5, 2020
+          </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+      </Col>
+      <Col xs="6" sm="3" md="3" lg="2">
+        <div className="dropdown-section mt-3 ml-3">
+          <h5 className="font-14 font-weight-bold header ml-4">CHECK OUT:</h5>
+          <Dropdown className="ml-2">
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+              Fri Jun 5, 2020
+          </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+      </Col>
+      <Col xs="6" sm="3" md="3" lg="2">
+        <div className="dropdown-section mt-3 ml-4">
+          <h5 className="font-14 font-weight-bold header ml-4">OCCUPANCY</h5>
+          <Dropdown className="ml-2">
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+              1 Adult/Room
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+      </Col>
+      <Col xs="6" sm="3" md="3" lg="2">
+        <Button size="lg" className="check-btn" variant="info">CHECK AVAILABILITY</Button>
+      </Col>
+    </Row>
+  );
 }
 
 export default AppNavBar;
