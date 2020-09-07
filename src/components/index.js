@@ -13,14 +13,14 @@ const Rooms = lazy(() => import("./views/rooms&rates"));
 // const NotFound = lazy(() => import("./views/notFound"));
 
 //for skipping authentication for development uncomment the line below.
-const Skip = true;
+// const Skip = true;
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      // (JSON.parse(localStorage.getItem("user")) && JSON.parse(localStorage.getItem("user")).data.token) ? (
+      (JSON.parse(localStorage.getItem("user")) && (JSON.parse(localStorage.getItem("user")).data.token ? true : false)) ? (
         //for development, if you want to skip Authentication please uncomment the line below and comment the one up.
-        (Skip)?(
+        // (Skip)?(
         <Component {...props} />
       ) : (
           <Redirect to="/" />

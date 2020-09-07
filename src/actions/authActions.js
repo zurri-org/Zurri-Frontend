@@ -1,3 +1,4 @@
+import api from "../api";
 import { authConstants } from "../constants";
 //Regsister User
 export const register_user_request = (user_data) => {
@@ -7,22 +8,18 @@ export const register_user_request = (user_data) => {
         password: user_data.password
     }
     return function(dispatch) {
-        dispatch({
-            type: authConstants.register_user_success,
-            payload: data
-        });
-        // return api.registerUser(data)
-        //     .then(response => {
-        //         dispatch({
-        //             type: authConstants.register_user_success,
-        //             payload: response.data
-        //         });
-        //     }).catch(error => {
-        //         dispatch({
-        //             type: authConstants.register_user_fail,
-        //             payload: error
-        //         });
-        //     });
+        return api.registerUser(data)
+            .then(response => {
+                dispatch({
+                    type: authConstants.register_user_success,
+                    payload: response.data
+                });
+            }).catch(error => {
+                dispatch({
+                    type: authConstants.register_user_fail,
+                    payload: error
+                });
+            });
     };
 };
 
