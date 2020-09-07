@@ -11,9 +11,10 @@ import { useEffect } from "react";
 import Register from "../../views/auth/register";
 import { open_modal } from "../../../actions/authActions";
 
-const AppHeader = ({close_modal, open_modal}) => {
+const AppHeader = ({ close_modal, open_modal }) => {
   const [scroll, setScroll] = useState(1);
   const [modalShow, setModalShow] = useState(false);
+  const data = (localStorage.getItem("user") != null ) ? JSON.parse(localStorage.getItem("user")).data : null
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -49,7 +50,7 @@ const AppHeader = ({close_modal, open_modal}) => {
           />
         </Navbar.Brand>
         <div className="custom-color d-lg-none d-xl-none">
-          Welcome: {" "} <strong className="custom-color">Bryan</strong>
+          Welcome: {" "} <strong className="custom-color">{data != null ? data.user.name != null ? data.user.name : null : null}</strong>
         </div>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -58,42 +59,47 @@ const AppHeader = ({close_modal, open_modal}) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto mr-4 nav-bar-custom font-14">
             <Nav.Link href="/">HOME</Nav.Link>
-            <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
-            <Nav.Link href="/facilities">FACILITIES</Nav.Link>
-            <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
             <Nav.Link href="/aboutpage">ABOUT US</Nav.Link>
-            <Nav.Link href="/" className="custom-color">
-              HELLO: <strong className="custom-color">Bryan</strong>
-            </Nav.Link>
-            <div className="btn-holder">
-              <Button
-                size="sm"
-                className="mr-4 btn-custom font-12 custom-purple"
-              >
-                SIGN IN
-              </Button>
-              <Button
-                variant="outline-info"
-                size="sm"
-                className="mr-4  btn-custom font-12"
-                onClick={() => open_modal()}
-              >
-                JOIN
-              </Button>
-            </div>
+            {data != null ? data.user.name != null ? (
+              <>
+                <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
+                <Nav.Link href="/facilities">FACILITIES</Nav.Link>
+                <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
+                <Nav.Link href="/" className="custom-color">
+                  HELLO: <strong className="custom-color">{data.user.name}</strong>
+                </Nav.Link>
+              </>
+
+            ) : null : (
+                <div className="btn-holder">
+                  <Button
+                    size="sm"
+                    className="mr-4 btn-custom font-12 custom-purple"
+                  >
+                    SIGN IN
+                  </Button>
+                  <Button
+                      variant="outline-info"
+                      size="sm"
+                      className="mr-4  btn-custom font-12"
+                      onClick={() => open_modal()}
+                    >
+                      JOIN
+                  </Button>
+                </div>
+              )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
       {/* Registration Modal */}
       <Register show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 };
 
-const mapStateToProps = ({Auth}) => {
+const mapStateToProps = ({ Auth }) => {
   const { close_modal } = Auth;
-  return {close_modal};
+  return { close_modal };
 };
 
 export default connect(mapStateToProps, { open_modal })(AppHeader);

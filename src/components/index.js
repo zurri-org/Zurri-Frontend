@@ -49,7 +49,7 @@ class MainApp extends Component {
               <PrivateRoute exact path="/facilities" component={Facilities} />
               <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
               <PrivateRoute exact path="/contactUs" component={ContactUs} />
-              <PrivateRoute exact path="/aboutpage" component={Aboutpage} />
+              <Route exact path="/aboutpage" component={Aboutpage} />
               {/* <Route exact path="*" component={NotFound} /> */}
             </Router>
           </Switch>
