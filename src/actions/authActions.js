@@ -1,6 +1,5 @@
-import { authConstants, apiUrl } from "../constants";
-import axios from "axios";
-
+import api from "../api";
+import { authConstants } from "../constants";
 //Regsister User
 export const register_user_request = (user_data) => {
     const data = {
@@ -9,28 +8,31 @@ export const register_user_request = (user_data) => {
         password: user_data.password
     }
     return function(dispatch) {
-        return axios.post(`${apiUrl}/auth/register`, data)
-            // .then(response => response.json)
+        return api.registerUser(data)
             .then(response => {
                 dispatch({
-                    type: authConstants.register_user,
+                    type: authConstants.register_user_success,
                     payload: response.data
+                });
+            }).catch(error => {
+                dispatch({
+                    type: authConstants.register_user_fail,
+                    payload: error
                 });
             });
     };
 };
 
-//Register Success
-export const register_user_success = (user) => {
+//Open modal
+export const open_modal = () => {
     return {
-        type: authConstants.register_user_success,
-        payload: user
+        type: authConstants.open_forms
     }
 }
 
-//Register Failure
-export const register_user_fail = () => {
+//Close modal
+export const close_modal = () => {
     return {
-        type: authConstants.register_user_fail
+        type: authConstants.close_forms
     }
 }
