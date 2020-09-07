@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import {
   Navbar,
   Nav,
@@ -8,8 +9,9 @@ import {
 import imageLogo from "../../../assets/img/logo.JPG";
 import { useEffect } from "react";
 import Register from "../../views/auth/register";
+import { open_modal } from "../../../actions/authActions";
 
-const AppHeader = () => {
+const AppHeader = ({close_modal, open_modal}) => {
   const [scroll, setScroll] = useState(1);
   const [modalShow, setModalShow] = useState(false);
 
@@ -21,6 +23,11 @@ const AppHeader = () => {
       }
     });
   });
+
+  useEffect(() => {
+    setModalShow(close_modal);
+  }, [close_modal]);
+
   return (
     <>
       <Navbar
@@ -33,7 +40,7 @@ const AppHeader = () => {
             : "navbar-custom fixed-top scrolled-nav"
         }
       >
-        
+
         <Navbar.Brand href="/" className={scroll ? null : "scrolled-nav-items"}>
           <Image
             src={imageLogo}
@@ -69,14 +76,13 @@ const AppHeader = () => {
                 variant="outline-info"
                 size="sm"
                 className="mr-4  btn-custom font-12"
-                onClick={() => setModalShow(true)}
+                onClick={() => open_modal()}
               >
                 JOIN
               </Button>
             </div>
           </Nav>
         </Navbar.Collapse>
-        
       </Navbar>
 
       {/* Registration Modal */}
@@ -85,4 +91,9 @@ const AppHeader = () => {
   );
 };
 
-export default AppHeader;
+const mapStateToProps = ({Auth}) => {
+  const { close_modal } = Auth;
+  return {close_modal};
+};
+
+export default connect(mapStateToProps, { open_modal })(AppHeader);
