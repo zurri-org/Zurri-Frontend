@@ -3,31 +3,46 @@ import { authConstants } from "../constants";
 const initialState = {
     user_details: [],
     auth_error: "",
-    close_modal: false
+    close_modal_register: false,
+    close_modal_login: false
 }
 
 export function authRedux(state = initialState, action) {
     switch (action.type) {
-      case authConstants.open_forms:
+      //open register
+      case authConstants.open_register:
         return {
           ...state,
-          close_modal: true
+          close_modal_register: true
         }
-
-      case authConstants.close_forms:
+      //close register
+      case authConstants.close_register:
         return {
           ...state,
-          close_modal: false
+          close_modal_register: false
         }
 
+      //open login
+      case authConstants.open_login:
+        return {
+          ...state,
+          close_modal_login: true
+        }
+      //close login
+      case authConstants.close_login:
+        return {
+          ...state,
+          close_modal_login: false
+        }
+      //register success
       case authConstants.register_user_success:
         localStorage.setItem("user", JSON.stringify(action.payload));
         return {
           ...state,
           user_details: action.payload,
-          close_modal: false
+          close_modal_register: false
         };
-
+      //register fail
       case authConstants.register_user_fail:
         return {
           ...state,

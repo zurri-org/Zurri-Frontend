@@ -9,12 +9,14 @@ import {
 import imageLogo from "../../../assets/img/logo.JPG";
 import { useEffect } from "react";
 import Register from "../../views/auth/register";
-import { open_modal } from "../../../actions/authActions";
+import { open_registration, open_login } from "../../../actions/authActions";
+import Login from "../../views/auth/login";
 
-const AppHeader = ({ close_modal, open_modal }) => {
+const AppHeader = ({ close_modal_register, open_registration, open_login, close_modal_login }) => {
   const [scroll, setScroll] = useState(1);
   const [modalShow, setModalShow] = useState(false);
-  const data = (localStorage.getItem("user") != null ) ? JSON.parse(localStorage.getItem("user")).data : null
+  const [loginShow, setLoginShow] = useState(false);
+  const data = (localStorage.getItem("user") != null) ? JSON.parse(localStorage.getItem("user")).data : null
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -26,8 +28,12 @@ const AppHeader = ({ close_modal, open_modal }) => {
   });
 
   useEffect(() => {
-    setModalShow(close_modal);
-  }, [close_modal]);
+    setModalShow(close_modal_register);
+  }, [close_modal_register]);
+
+  useEffect(() => {
+    setLoginShow(close_modal_login);
+  }, [close_modal_login]);
 
   return (
     <>
@@ -75,17 +81,17 @@ const AppHeader = ({ close_modal, open_modal }) => {
                   <Button
                     size="sm"
                     className="mr-4 btn-custom font-12 custom-purple"
-                    onclick={() => setModalShow(true)}
+                    onClick={() => open_login()}
                   >
                     SIGN IN
                   </Button>
                   <Button
-                      variant="outline-info"
-                      size="sm"
-                      className="mr-4  btn-custom font-12"
-                      onClick={() => open_modal()}
-                    >
-                      JOIN
+                    variant="outline-info"
+                    size="sm"
+                    className="mr-4  btn-custom font-12"
+                    onClick={() => open_registration()}
+                  >
+                    JOIN
                   </Button>
                 </div>
               )}
@@ -93,14 +99,16 @@ const AppHeader = ({ close_modal, open_modal }) => {
         </Navbar.Collapse>
       </Navbar>
       {/* Registration Modal */}
-      <Register show={modalShow} onHide={() => setModalShow(false)} />
+      <Register show={loginShow} onHide={() => setLoginShow(false)} />
+      {/* Login Modal */}
+      <Login show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 };
 
 const mapStateToProps = ({ Auth }) => {
-  const { close_modal } = Auth;
-  return { close_modal };
+  const { close_modal_register, close_modal_login } = Auth;
+  return { close_modal_register, close_modal_login };
 };
 
-export default connect(mapStateToProps, { open_modal })(AppHeader);
+export default connect(mapStateToProps, { open_registration, open_login })(AppHeader);
