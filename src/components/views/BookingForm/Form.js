@@ -1,3 +1,4 @@
+import React from "react";
 import { FaPlus } from 'react-icons/fa';
 
 class BookingForm extends React.Component {
@@ -40,7 +41,7 @@ class BookingForm extends React.Component {
       Occupants: this.state.Occupants
     };
 
-    this.props.addAppointment(tempApt);
+    this.props.BookingForm(tempApt);
 
     this.setState({
       Names: '',
