@@ -23,16 +23,30 @@ export const register_user_request = (user_data) => {
     };
 };
 
-//Open modal
-export const open_modal = () => {
+//Open Registration modal
+export const open_registration = () => {
     return {
-        type: authConstants.open_forms
+        type: authConstants.open_register
     }
 }
 
-//Close modal
-export const close_modal = () => {
+//Close Registration modal
+export const close_registration = () => {
     return {
-        type: authConstants.close_forms
+        type: authConstants.close_register
+    }
+}
+
+//Open login modal
+export const open_login = () => {
+    return {
+        type: authConstants.open_login
+    }
+}
+
+//Close login modal
+export const close_login = () => {
+    return {
+        type: authConstants.close_login
     }
 }
