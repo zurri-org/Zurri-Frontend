@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { connect } from "react-redux";
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
-import { register_user_request, close_modal } from "../../../actions/authActions";
+import { register_user_request, close_registration } from "../../../actions/authActions";
 
 const Register = (props) => {
   const { register_user_request, ...rest } = props;
@@ -16,7 +16,7 @@ const Register = (props) => {
       backdrop="static"
       keyboard={false}
     >
-      <Modal.Header closeButton onClick={()=> props.close_modal()}>
+      <Modal.Header closeButton onClick={()=> props.close_registration()}>
         <Modal.Title
           id="contained-modal-title-vcenter"
           className="custom-color"
@@ -205,4 +205,4 @@ const mapStateToProps = ({ Auth }) => {
   return { auth_error, user_details };
 }
 
-export default connect(mapStateToProps, { register_user_request, close_modal })(Register);
+export default connect(mapStateToProps, { register_user_request, close_registration })(Register);

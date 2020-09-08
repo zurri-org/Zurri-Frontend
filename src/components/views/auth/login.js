@@ -3,10 +3,10 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { connect } from "react-redux";
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
-import { login_user_request, close_modal } from "../../../actions/authActions";
+import { open_login, close_login } from "../../../actions/authActions";
 
 const Login = (props) => {
-  const { login_user_request, ...rest } = props;
+  const { login_user_request, close_login, ...rest } = props;
   return (
     <Modal
       {...rest}
@@ -16,7 +16,7 @@ const Login = (props) => {
       backdrop="static"
       keyboard={false}
     >
-      <Modal.Header closeButton onClick={()=> props.close_modal()}>
+      <Modal.Header closeButton onClick={()=> close_login()}>
         <Modal.Title
           id="contained-modal-title-vcenter"
           className="custom-color"
@@ -137,9 +137,10 @@ const Login = (props) => {
     </Modal>
   );
 };
+
 const mapStateToProps = ({ Auth }) => {
   const { auth_error, user_details } = Auth;
   return { auth_error, user_details };
 }
 
-export default connect(mapStateToProps, { login_user_request, close_modal })(Login);
+export default connect(mapStateToProps, { open_login, close_login })(Login);
