@@ -9,6 +9,36 @@ const initialState = {
 
 export function authRedux(state = initialState, action) {
     switch (action.type) {
+      //register success
+      case authConstants.register_user_success:
+        localStorage.setItem("user", JSON.stringify(action.payload));
+        return {
+          ...state,
+          user_details: action.payload,
+          close_modal_register: false
+        };
+      //register fail
+      case authConstants.register_user_fail:
+        return {
+          ...state,
+          auth_error: action.payload
+        };
+
+      //login success
+      case authConstants.login_user_success:
+        localStorage.setItem("user", JSON.stringify(action.payload));
+        return {
+          ...state,
+          user_details: action.payload,
+          close_modal_login: false
+        }
+      //login fail
+      case authConstants.login_user_fail:
+        return {
+          ...state,
+          auth_error: action.payload
+        }
+
       //open register
       case authConstants.open_register:
         return {
@@ -34,20 +64,6 @@ export function authRedux(state = initialState, action) {
           ...state,
           close_modal_login: false
         }
-      //register success
-      case authConstants.register_user_success:
-        localStorage.setItem("user", JSON.stringify(action.payload));
-        return {
-          ...state,
-          user_details: action.payload,
-          close_modal_register: false
-        };
-      //register fail
-      case authConstants.register_user_fail:
-        return {
-          ...state,
-          auth_error: action.payload
-        };
 
       default:
         return state;

@@ -30,7 +30,7 @@ export const login_user_request = (login_details) => {
             .then(response => {
                 dispatch({
                     type: authConstants.login_user_success,
-                    payload: response.data
+                    payload: response.data.data
                 });
             }).catch(error => {
                 dispatch({
