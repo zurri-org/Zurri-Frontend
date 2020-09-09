@@ -39,7 +39,7 @@ export function authRedux(state = initialState, action) {
         };
       //login success
       case authConstants.login_user_success:
-        // localStorage.setItem("user", JSON.stringify(action.payload));
+        localStorage.setItem("user", JSON.stringify(action.payload));
         return {
           ...state,
           user_details: action.payload,
@@ -50,6 +50,14 @@ export function authRedux(state = initialState, action) {
         return {
           ...state,
           auth_error: action.payload
+        };
+      //logout user
+      case authConstants.logout_user:
+        localStorage.removeItem("user");
+        window.location.reload();
+        return {
+          ...state,
+          user_details: []
         };
 
       //open register

@@ -18,4 +18,5 @@ export const authConstants = {
     login_user: "login_user_request",
     login_user_fail: "login_user_failure",
     login_user_success: "login_user_successfull",
+    logout_user: "logout_user_request"
 };

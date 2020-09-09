@@ -9,10 +9,10 @@ import {
 import imageLogo from "../../../assets/img/logo.JPG";
 import { useEffect } from "react";
 import Register from "../../views/auth/register";
-import { open_registration, open_login } from "../../../actions/authActions";
+import { open_registration, open_login, logout } from "../../../actions/authActions";
 import Login from "../../views/auth/login";
 
-const AppHeader = ({ close_modal_register, open_registration, open_login, close_modal_login }) => {
+const AppHeader = ({ close_modal_register, open_registration, open_login, close_modal_login, logout }) => {
   const [scroll, setScroll] = useState(1);
   const [modalShow, setModalShow] = useState(false);
   const [loginShow, setLoginShow] = useState(false);
@@ -34,6 +34,13 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
   useEffect(() => {
     setLoginShow(close_modal_login);
   }, [close_modal_login]);
+
+  // const logout_user = (e) => {
+    
+  //   //logout action
+  //   logout();
+  //   console.log("clicked");
+  // }
 
   return (
     <>
@@ -74,8 +81,16 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
                 <Nav.Link href="/" className="custom-color">
                   HELLO: <strong className="custom-color">{data.user.name}</strong>
                 </Nav.Link>
+                <Nav.Link href="/" onClick={(e) => { e.preventDefault(); logout()}} className="color-primary">
+                  logout {" "} 
+                  <i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+                </Nav.Link>
+                {/* <div className="btn-holder">
+                  <Button size="sm">
+                    <i className="fa fa-arrow-circle-o-right" aria-hidden="true" onClick={() => open_login()}></i>
+                  </Button>
+                </div> */}
               </>
-
             ) : null : (
                 <div className="btn-holder">
                   <Button
@@ -111,4 +126,4 @@ const mapStateToProps = ({ Auth }) => {
   return { close_modal_register, close_modal_login };
 };
 
-export default connect(mapStateToProps, { open_registration, open_login })(AppHeader);
+export default connect(mapStateToProps, { open_registration, open_login, logout })(AppHeader);
