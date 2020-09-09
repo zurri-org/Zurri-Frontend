@@ -7,7 +7,7 @@ export const register_user_request = (user_data) => {
         email: user_data.email,
         password: user_data.password
     }
-    return function(dispatch) {
+    return function (dispatch) {
         return api.registerUser(data)
             .then(response => {
                 dispatch({
@@ -28,10 +28,15 @@ export const login_user_request = (login_details) => {
     return (dispatch => {
         return api.loginUser(login_details)
             .then(response => {
-                dispatch({
-                    type: authConstants.login_user_success,
-                    payload: response.data.data
-                });
+                (response.data.data.errors === "Invalid Credentials") ?
+                    dispatch({
+                        type: authConstants.login_user_fail,
+                        payload: response.data.data
+                    })
+                    : dispatch({
+                        type: authConstants.login_user_success,
+                        payload: response.data.data.errors
+                    });
             }).catch(error => {
                 dispatch({
                     type: authConstants.login_user_fail,

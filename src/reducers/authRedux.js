@@ -26,7 +26,7 @@ export function authRedux(state = initialState, action) {
 
       //login success
       case authConstants.login_user_success:
-        localStorage.setItem("user", JSON.stringify(action.payload));
+        // localStorage.setItem("user", JSON.stringify(action.payload));
         return {
           ...state,
           user_details: action.payload,
