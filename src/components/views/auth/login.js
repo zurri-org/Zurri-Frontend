@@ -29,10 +29,8 @@ const Login = (props) => {
           <Col md="8" className="ml-auto mr-auto">
             <Formik
               initialValues={{
-                userName: "",
                 email: "",
                 password: "",
-                passwordConfirmation: "",
               }}
               validationSchema={Yup.object({
                 email: Yup.string()

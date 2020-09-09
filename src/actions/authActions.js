@@ -23,6 +23,24 @@ export const register_user_request = (user_data) => {
     };
 };
 
+//Login User
+export const login_user_request = (login_details) => {
+    return (dispatch => {
+        return api.loginUser(login_details)
+            .then(response => {
+                dispatch({
+                    type: authConstants.login_user_success,
+                    payload: response.data
+                });
+            }).catch(error => {
+                dispatch({
+                    type: authConstants.login_user_fail,
+                    payload: error
+                });
+            });
+    });
+}
+
 //Open Registration modal
 export const open_registration = () => {
     return {
