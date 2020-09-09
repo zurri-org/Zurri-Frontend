@@ -1,13 +1,22 @@
 import api from "../api";
 import { authConstants } from "../constants";
 //Regsister User
+const load_register = () => {
+    return {
+        type: authConstants.registering
+    }
+}
 export const register_user_request = (user_data) => {
     const data = {
         name: user_data.userName,
         email: user_data.email,
         password: user_data.password
     }
-    return function (dispatch) {
+    return (dispatch => {
+        // dispatch registering
+        dispatch(load_register());
+
+        // register api
         return api.registerUser(data)
             .then(response => {
                 dispatch({
@@ -20,22 +29,32 @@ export const register_user_request = (user_data) => {
                     payload: error
                 });
             });
-    };
+    });
 };
 
+//logging in user
+const load_login = () => {
+    return {
+        type: authConstants.logging
+    }
+}
 //Login User
 export const login_user_request = (login_details) => {
     return (dispatch => {
+        // dispatch logging
+        dispatch(load_login());
+
+        // login api
         return api.loginUser(login_details)
             .then(response => {
                 (response.data.data.errors === "Invalid Credentials") ?
                     dispatch({
                         type: authConstants.login_user_fail,
-                        payload: response.data.data
+                        payload: response.data.data.errors
                     })
                     : dispatch({
                         type: authConstants.login_user_success,
-                        payload: response.data.data.errors
+                        payload: response.data.data
                     });
             }).catch(error => {
                 dispatch({

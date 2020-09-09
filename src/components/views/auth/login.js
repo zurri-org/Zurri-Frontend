@@ -8,9 +8,10 @@ import {
   close_login,
   login_user_request
 } from "../../../actions/authActions";
+import Loader from "../../static/Loader";
 
 const Login = (props) => {
-  const { login_user_request, close_login, open_login, ...rest } = props;
+  const { login_user_request, close_login, open_login, loading, ...rest } = props;
   return (
     <Modal
       {...rest}
@@ -119,8 +120,13 @@ const Login = (props) => {
                       disabled={isSubmitting}
                       onClick={handleSubmit}
                     >
-                      <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
-                        Login
+                      {loading === "logging" ?
+                        (<Loader message="logging..." />) :
+                        (<>
+                          <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
+                          Login
+                        </>)
+                      }
                     </Button>
                   </Form>
                 )}
@@ -140,8 +146,8 @@ const Login = (props) => {
   );
 };
 const mapStateToProps = ({ Auth }) => {
-  const { auth_error, user_details } = Auth;
-  return { auth_error, user_details };
+  const { auth_error, user_details, loading } = Auth;
+  return { auth_error, user_details, loading };
 }
 export default connect(
   mapStateToProps,
