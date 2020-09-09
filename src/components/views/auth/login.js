@@ -3,10 +3,15 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { connect } from "react-redux";
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
-import { open_login, close_login } from "../../../actions/authActions";
+import {
+  open_login,
+  close_login,
+  login_user_request
+} from "../../../actions/authActions";
+import Loader from "../../static/Loader";
 
 const Login = (props) => {
-  const { login_user_request, close_login, ...rest } = props;
+  const { login_user_request, close_login, open_login, loading, ...rest } = props;
   return (
     <Modal
       {...rest}
@@ -16,7 +21,7 @@ const Login = (props) => {
       backdrop="static"
       keyboard={false}
     >
-      <Modal.Header closeButton onClick={()=> close_login()}>
+      <Modal.Header closeButton onClick={() => close_login()}>
         <Modal.Title
           id="contained-modal-title-vcenter"
           className="custom-color"
@@ -29,10 +34,8 @@ const Login = (props) => {
           <Col md="8" className="ml-auto mr-auto">
             <Formik
               initialValues={{
-                userName: "",
                 email: "",
                 password: "",
-                passwordConfirmation: "",
               }}
               validationSchema={Yup.object({
                 email: Yup.string()
@@ -56,7 +59,7 @@ const Login = (props) => {
                 isSubmitting,
               }) => (
                   <Form className="register">
-                      
+
                     <Form.Group>
                       <Form.Label className="font-14 p-color">
                         Email address
@@ -117,8 +120,13 @@ const Login = (props) => {
                       disabled={isSubmitting}
                       onClick={handleSubmit}
                     >
-                        <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
-                        Login
+                      {loading === "logging" ?
+                        (<Loader message="logging..." />) :
+                        (<>
+                          <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
+                          Login
+                        </>)
+                      }
                     </Button>
                   </Form>
                 )}
@@ -137,10 +145,15 @@ const Login = (props) => {
     </Modal>
   );
 };
-
 const mapStateToProps = ({ Auth }) => {
-  const { auth_error, user_details } = Auth;
-  return { auth_error, user_details };
+  const { auth_error, user_details, loading } = Auth;
+  return { auth_error, user_details, loading };
 }
-
-export default connect(mapStateToProps, { open_login, close_login })(Login);
+export default connect(
+  mapStateToProps,
+  {
+    open_login,
+    close_login,
+    login_user_request
+  }
+)(Login);
