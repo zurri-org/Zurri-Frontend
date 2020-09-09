@@ -6,7 +6,7 @@ import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { open_login, close_login } from "../../../actions/authActions";
 
 const Login = (props) => {
-  const { login_user_request, close_login, ...rest } = props;
+  const { login_user_request, close_login, open_login, ...rest } = props;
   return (
     <Modal
       {...rest}

@@ -99,9 +99,9 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
         </Navbar.Collapse>
       </Navbar>
       {/* Registration Modal */}
-      <Register show={loginShow} onHide={() => setModalShow(false)} />
+      <Register show={modalShow} onHide={() => setModalShow(false)} />
       {/* Login Modal */}
-      <Login show={modalShow} onHide={() => setLoginShow(false)} />
+      <Login show={loginShow} onHide={() => setLoginShow(false)} />
     </>
   );
 };

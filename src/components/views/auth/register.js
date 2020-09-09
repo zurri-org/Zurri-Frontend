@@ -6,7 +6,7 @@ import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { register_user_request, close_registration } from "../../../actions/authActions";
 
 const Register = (props) => {
-  const { register_user_request, ...rest } = props;
+  const { register_user_request, close_registration, ...rest } = props;
   return (
     <Modal
       {...rest}
