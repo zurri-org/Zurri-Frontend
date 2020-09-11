@@ -24,7 +24,8 @@ export function authRedux(state = initialState, action) {
           ...state,
           user_details: action.payload,
           close_modal_register: false,
-          notifier: { type: "success", sms: "Registered successfully" }
+          notifier: { type: "success", sms: "Registered successfully" },
+          loading: ""
         };
       //register fail
       case authConstants.register_user_fail:
@@ -32,7 +33,8 @@ export function authRedux(state = initialState, action) {
           ...state,
           auth_error: action.payload,
           close_modal_register: false,
-          notifier: { type: "error", sms: "Registration failed" }
+          notifier: { type: "error", sms: "Registration failed" },
+          loading: ""
         };
 
       //logging
@@ -48,7 +50,8 @@ export function authRedux(state = initialState, action) {
           ...state,
           user_details: action.payload,
           close_modal_login: false,
-          notifier: { type: "success", sms: "Login Successful" }
+          notifier: { type: "success", sms: "Login Successful" },
+          loading: ""
         };
       //login fail
       case authConstants.login_user_fail:
@@ -56,7 +59,8 @@ export function authRedux(state = initialState, action) {
           ...state,
           auth_error: action.payload,
           close_modal_login: false,
-          notifier: { type: "error", sms: "Login failed" }
+          notifier: { type: "error", sms: "Login failed" },
+          loading: ""
         };
       //logout user
       case authConstants.logout_user:
