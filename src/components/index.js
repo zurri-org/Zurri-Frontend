@@ -7,7 +7,7 @@ import AppHeader from "./static/NavBar";
 import AppNavBar from "./static/NavBar/appNavBar";
 import Footer from "./static/Footer";
 import Notification from "./static/Notification";
-import LandingPage from "./views/landingPage";
+const LandingPage = lazy(() => import("./views/landingPage"));
 const HomePage = lazy(() => import("./views/homepage"));
 const Facilities = lazy(() => import("./views/facilities"));
 const Aboutpage = lazy(() => import("./views/aboutpage"));
@@ -34,7 +34,9 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 class MainApp extends Component {
+
   render() {
+    console.log(this.props.notifier);
     return (
       <>
         <AppHeader />
