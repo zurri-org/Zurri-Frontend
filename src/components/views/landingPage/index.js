@@ -32,6 +32,8 @@ const LandingPage = () => {
           </Form>
         </Col>
       </Row>
+
+      {/* Reusable component sections */}
       <PageSection
         heading="HOTELS"
         sectionColor="rooms-color"

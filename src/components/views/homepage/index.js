@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import PageSection from "../../static/section";
+import AboutSection from "./aboutSection";
 
 const HomePage = () => {
     const appartments = [
@@ -25,6 +26,11 @@ const HomePage = () => {
             </Row>
           </Container>
         </section>
+
+        {/* about us section */}
+        <AboutSection />
+        
+        {/* Reusable component sections */}
         <PageSection
           heading="ROOMS & RATES"
           sectionColor="rooms-color"
