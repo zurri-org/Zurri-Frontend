@@ -1,10 +1,12 @@
 import React, { Component, Suspense, lazy } from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 import { Jumbotron, Container } from "react-bootstrap";
 import { history } from "../store";
 import AppHeader from "./static/NavBar";
 import AppNavBar from "./static/NavBar/appNavBar";
 import Footer from "./static/Footer";
+import Notification from "./static/Notification";
 const HomePage = lazy(() => import("./views/homepage"));
 const Facilities = lazy(() => import("./views/facilities"));
 const Aboutpage = lazy(() => import("./views/aboutpage"));
@@ -30,19 +32,24 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 class MainApp extends Component {
+
   render() {
+    console.log(this.props.notifier);
     return (
       <>
         <AppHeader />
+        <Notification notifyType={this.props.notifier.type} notifySms={this.props.notifier.sms} />
         <AppNavBar />
-        <Suspense fallback={
-          <Jumbotron fluid className="mt-4 mb-4 mr-auto ml-auto">
-            <Container>
-              <h1>Loading......</h1>
-              <p>Please wait</p>
-            </Container>
-          </Jumbotron>
-        }>
+        <Suspense
+          fallback={
+            <Jumbotron fluid className="mt-4 mb-4 mr-auto ml-auto">
+              <Container>
+                <h1>Loading......</h1>
+                <p>Please wait</p>
+              </Container>
+            </Jumbotron>
+          }
+        >
           <Switch>
             <Router history={history}>
               <Route exact path="/" component={HomePage} />
@@ -56,7 +63,12 @@ class MainApp extends Component {
         </Suspense>
         <Footer />
       </>
-    )
+    );
   }
 }
-export default MainApp;
+
+const mapStateToProps = ({ Auth }) => {
+  const { notifier } = Auth;
+  return { notifier };
+}
+export default connect(mapStateToProps, {})(MainApp);
