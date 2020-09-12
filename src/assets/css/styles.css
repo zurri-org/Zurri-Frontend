@@ -356,3 +356,23 @@ h1 {
 .errorInput {
     border-bottom: 1px solid red !important;
 }
+.home-search {
+    margin-top: 7rem;
+}
+.home-search> .mx-auto> .search-form {
+    border-radius: 0px;
+    width: 80%;
+}
+.no-border-radius {
+    border-radius: 0px !important;
+}
+.search-form> .form-control {
+    width: 75%;
+}
+.search-form> .custom-btn-block {
+    color: #fff;
+    background-color: #666812;
+    border-color: #666812;
+    height: 50px;
+    width: 100px;
+}
