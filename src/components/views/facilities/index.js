@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Container, Jumbotron, Card, CardGroup} from 'react-bootstrap';
 import CardImage from "../../../assets/img/card.jpeg";
 import Bizserv from "../../../assets/img/bizserv.jpeg";
@@ -9,6 +9,7 @@ import Transp from "../../../assets/img/transp.jpg";
 import Concierge from "../../../assets/img/concierge.jpg";
 
 const Facilities = () => {
+    
     return (
         <Container>
             <div className="background2"></div>
@@ -25,12 +26,16 @@ const Facilities = () => {
                     and we are proud to say that, our facilities are 100% safe to visit
                 </p>
             </div>
+            <button className="btn" onClick={()=>{alert("click")}}>button</button>
             <Jumbotron className="mt-3">
                 <h1>Overview of Facilities and Services</h1>
             </Jumbotron>
             <CardGroup>
                 <Card>
-                    <Card.Img variant="top" src={Bizserv} className="services" />
+                    <Card.Img variant="top" src={Bizserv} className="services" id="sev" onMouseOut={()=>{
+                        let element= document.getElementById("sev");
+                        element.classList.toggle("opacity");
+                    }}/>
                     <Card.Body>
                         <Card.Title>Business Services</Card.Title>
                         <Card.Text>
@@ -39,11 +44,21 @@ const Facilities = () => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        <small className="text-muted"></small>
+                        <small className="text-muted" id="small"></small>
+                        
+                       
+
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src={Fnb} className="services" />
+                    <Card.Img variant="top" src={Fnb} className="services" id="sev1" onMouseOver={()=>{
+                        let element= document.getElementById("sev1");
+                        element.classList.toggle("opacity");
+                        
+                        
+                    }
+                        
+                    } />
                     <Card.Body>
                         <Card.Title>Food and Beverages</Card.Title>
                         <Card.Text>
@@ -56,7 +71,12 @@ const Facilities = () => {
                       </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src={Fitness} className="services" />
+                    <Card.Img variant="top" src={Fitness} className="services" id="sev2" onMouseOver={()=>{
+                        let element= document.getElementById("sev2");
+                        element.classList.toggle("opacity");
+                    }
+                }
+                         />
                     <Card.Body>
                         <Card.Title>Fitness</Card.Title>
                         <Card.Text>
@@ -67,13 +87,17 @@ const Facilities = () => {
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"></small>
+                        <p id="test"></p>
                     </Card.Footer>
                     </Card>
                     
                     </CardGroup><br></br>
                     <CardGroup>
                 <Card>
-                    <Card.Img variant="top" src={Concierge} className="services" />
+                    <Card.Img variant="top" src={Concierge} className="services" id="sev3" onMouseOver={()=>{
+                        let element= document.getElementById("sev3");
+                        element.classList.toggle("opacity");
+                     }} />
                     <Card.Body>
                         <Card.Title>Concierge Services</Card.Title>
                         <Card.Text>
@@ -86,7 +110,10 @@ const Facilities = () => {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src={Transp} className="services" />
+                    <Card.Img variant="top" src={Transp} className="services" id="sev4" onMouseOver={()=>{
+                        let element= document.getElementById("sev4");
+                        element.classList.toggle("opacity");
+                     }} />
                     <Card.Body>
                         <Card.Title>Transportation service</Card.Title>
                         <Card.Text>
@@ -99,7 +126,10 @@ const Facilities = () => {
                       </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src={Room} className="services" />
+                    <Card.Img variant="top" src={Room}className="services" id="sev5" onMouseOver={()=>{
+                        let element= document.getElementById("sev5");
+                        element.classList.toggle("opacity");
+                     }} />
                     <Card.Body>
                         <Card.Title>In-Room Services</Card.Title>
                         <Card.Text>
@@ -114,6 +144,8 @@ const Facilities = () => {
                     </Card>
                     
                     </CardGroup>
+                    
+                    
         </Container>
     )
 }
