@@ -9,17 +9,10 @@ import {
 import imageLogo from "../../../assets/img/logo.JPG";
 import { useEffect } from "react";
 import Register from "../../views/auth/register";
-<<<<<<< HEAD
-import { open_registration, open_login } from "../../../actions/authActions";
-import Login from "../../views/auth/login";
-
-const AppHeader = ({ close_modal_register, open_registration, open_login, close_modal_login }) => {
-=======
 import { open_registration, open_login, logout } from "../../../actions/authActions";
 import Login from "../../views/auth/login";
 
 const AppHeader = ({ close_modal_register, open_registration, open_login, close_modal_login, logout }) => {
->>>>>>> develop
   const [scroll, setScroll] = useState(1);
   const [modalShow, setModalShow] = useState(false);
   const [loginShow, setLoginShow] = useState(false);
@@ -79,37 +72,6 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
           <Nav className="ml-auto mr-4 nav-bar-custom font-14">
             <Nav.Link href="/home">HOME</Nav.Link>
             <Nav.Link href="/aboutpage">ABOUT US</Nav.Link>
-<<<<<<< HEAD
-            {data != null ? data.user.name != null ? (
-              <>
-                <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
-                <Nav.Link href="/facilities">FACILITIES</Nav.Link>
-                <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
-                <Nav.Link href="/" className="custom-color">
-                  HELLO: <strong className="custom-color">{data.user.name}</strong>
-                </Nav.Link>
-              </>
-
-            ) : null : (
-                <div className="btn-holder">
-                  <Button
-                    size="sm"
-                    className="mr-4 btn-custom font-12 custom-purple"
-                    onClick={() => open_login()}
-                  >
-                    SIGN IN
-                  </Button>
-                  <Button
-                    variant="outline-info"
-                    size="sm"
-                    className="mr-4  btn-custom font-12"
-                    onClick={() => open_registration()}
-                  >
-                    JOIN
-                  </Button>
-                </div>
-              )}
-=======
             {data != null ? (
               data.user.name != null ? (
                 <>
@@ -155,20 +117,13 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
                 </Button>
               </div>
             )}
->>>>>>> develop
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       {/* Registration Modal */}
-<<<<<<< HEAD
-      <Register show={loginShow} onHide={() => setLoginShow(false)} />
-      {/* Login Modal */}
-      <Login show={modalShow} onHide={() => setModalShow(false)} />
-=======
       <Register show={modalShow} onHide={() => setModalShow(false)} />
       {/* Login Modal */}
       <Login show={loginShow} onHide={() => setLoginShow(false)} />
->>>>>>> develop
     </>
   );
 };
@@ -178,8 +133,4 @@ const mapStateToProps = ({ Auth }) => {
   return { close_modal_register, close_modal_login };
 };
 
-<<<<<<< HEAD
-export default connect(mapStateToProps, { open_registration, open_login })(AppHeader);
-=======
 export default connect(mapStateToProps, { open_registration, open_login, logout })(AppHeader);
->>>>>>> develop

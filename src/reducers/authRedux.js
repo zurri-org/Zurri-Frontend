@@ -4,13 +4,9 @@ const initialState = {
     user_details: [],
     auth_error: "",
     close_modal_register: false,
-<<<<<<< HEAD
-    close_modal_login: false
-=======
     close_modal_login: false,
     loading: "",
     notifier: ""
->>>>>>> develop
 }
 
 export function authRedux(state = initialState, action) {

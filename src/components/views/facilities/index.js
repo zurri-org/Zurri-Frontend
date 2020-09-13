@@ -26,7 +26,7 @@ const Facilities = () => {
                     and we are proud to say that, our facilities are 100% safe to visit
                 </p>
             </div>
-            <button className="btn" onClick={()=>{alert("click")}}>button</button>
+            
             <Jumbotron className="mt-3">
                 <h1>Overview of Facilities and Services</h1>
             </Jumbotron>
@@ -39,8 +39,7 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>Business Services</Card.Title>
                         <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                        In a busy working day, you may well need to have a quiet place where you can sit and work, read the day's newspapers, watch TV or concentrate on a good book.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -62,8 +61,7 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>Food and Beverages</Card.Title>
                         <Card.Text>
-                            This card has supporting text below as a natural lead-in to additional
-                            content.{' '}
+                        We go to great lengths to ensure good quality and we would like to give our guests the best start to the day. Therefore, we offer a delicious breakfast buffet that focuses on quality, ecology, health and, not least, good taste.{' '}
                         </Card.Text>
                     </Card.Body>
                       <Card.Footer>
@@ -80,9 +78,7 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>Fitness</Card.Title>
                         <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to
-                            show that equal height action.
+                        Time for today's workout? We welcome you to our brand-new fitness which is located on the 4th floor. The room is about 60 square meters and available for all our guests.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -101,8 +97,9 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>Concierge Services</Card.Title>
                         <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                        If you are in doubt about where to eat during your visit at Zurri Hotels, do not fear. By contacting the hotel reception our competent personnel can guide you to many exciting and great "hidden" eateries.
+
+If you prefer more of the night life and a couple of drinks out on the town, we are just as well-prepared. 
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -117,8 +114,7 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>Transportation service</Card.Title>
                         <Card.Text>
-                            This card has supporting text below as a natural lead-in to additional
-                            content.{' '}
+                        If you would like a private transfer or sight-seeing, please contact the hotel directly.{' '}
                         </Card.Text>
                     </Card.Body>
                       <Card.Footer>
@@ -133,9 +129,7 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>In-Room Services</Card.Title>
                         <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to
-                            show that equal height action.
+                        As a guest at Zurri Hotels, you fall asleep behind hotel walls that cherish Danish design and retro phenomena – the ones that have passed through the nostalgic eye of a needle and once again found the way to our homes and hearts.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
