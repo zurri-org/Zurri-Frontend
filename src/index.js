@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/css/styles.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+//bootstrap css
+import "bootstrap/dist/css/bootstrap.min.css";
+//custom styles
+import "./assets/css/styles.css";
+//notify css
+import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.render(
   <React.StrictMode>
