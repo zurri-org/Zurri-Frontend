@@ -1,7 +1,8 @@
 import React from "react";
-import { Row, Container, Button, Card, Col } from "react-bootstrap";
+import { Row, Container, Card, Col } from "react-bootstrap";
 import hotelImage from "../../../assets/img/bg1.jpg";
-const PageSection = ({ heading, sectionColor, appartments }) => {
+const PageSection = ({ heading, sectionColor, appartments }) => { 
+  const viewMoreUrl = sectionColor ? "/rooms&rates" : "/facilities";
   return (
     <section className={sectionColor ? "section rooms-color" : "section"}>
       <Row className="mt-4 mb-8">
@@ -26,9 +27,11 @@ const PageSection = ({ heading, sectionColor, appartments }) => {
             </Col>
           ))}
         </Row>
-        <Button size="sm" className="mt-4 mb-4 custom-btn">
+        {/* <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
+        <Nav.Link href="/facilities">FACILITIES</Nav.Link> */}
+        <a href={viewMoreUrl} size="sm" className="btn mt-4 mb-4 custom-btn">
           View All
-        </Button>
+        </a>
       </Container>
     </section>
   );

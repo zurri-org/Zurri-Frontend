@@ -75,8 +75,6 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
             {data != null ? (
               data.user.name != null ? (
                 <>
-                  <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
-                  <Nav.Link href="/facilities">FACILITIES</Nav.Link>
                   <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
                   <Nav.Link href="/" className="custom-color">
                     HELLO:{" "}
