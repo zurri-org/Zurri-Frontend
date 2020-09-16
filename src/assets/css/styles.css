@@ -113,7 +113,7 @@ footer {
 
 
 /* ------------custom css of black nevigation bar---------- */
-.dark-nav-bar {
+/* .dark-nav-bar {
     margin-top: 100px;
     height: auto;
     background-color: #242424;
@@ -185,7 +185,7 @@ footer {
 }
 .collapse> .navbar-nav> .color-primary {
     color: #007bff;
-}
+} */
 
 /* @media query css */
 @media(max-width: 992px) {
@@ -260,6 +260,10 @@ footer {
     background-size: cover;
     background-color: #464646;
     height: 100vh;
+    margin-top: 6rem;
+}
+.top-section {
+    margin-top: 6rem;
 }
 .landing-header {
     background-color: hsl(0deg 0% 54% / 30%);

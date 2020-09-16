@@ -27,8 +27,6 @@ const PageSection = ({ heading, sectionColor, appartments }) => {
             </Col>
           ))}
         </Row>
-        {/* <Nav.Link href="/rooms&rates">ROOMS&RATES</Nav.Link>
-        <Nav.Link href="/facilities">FACILITIES</Nav.Link> */}
         <a href={viewMoreUrl} size="sm" className="btn mt-4 mb-4 custom-btn">
           View All
         </a>

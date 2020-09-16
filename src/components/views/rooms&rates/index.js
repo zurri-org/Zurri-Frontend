@@ -3,7 +3,7 @@ import { Container, Jumbotron } from 'react-bootstrap';
 
 const Rooms = () => {
     return (
-        <Container className="mt-3">
+        <Container className="top-section">
             <Jumbotron>
                 <h1>Rooms Page!</h1>
                 <p>This is the space for Rooms and Ratings page</p>

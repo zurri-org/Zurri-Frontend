@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { Jumbotron, Container } from "react-bootstrap";
 import { history } from "../store";
 import AppHeader from "./static/NavBar";
-import AppNavBar from "./static/NavBar/appNavBar";
 import Footer from "./static/Footer";
 import Notification from "./static/Notification";
 const LandingPage = lazy(() => import("./views/landingPage"));
@@ -32,6 +31,20 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     }
   />
 );
+// defining public route
+const PublicRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) =>
+      JSON.parse(localStorage.getItem("user")) &&
+      (JSON.parse(localStorage.getItem("user")).data.token ? true : false) ? (
+        <Redirect to="/home" />
+      ) : (
+        <Component {...props} />
+      )
+    }
+  />
+);
 
 class MainApp extends Component {
 
@@ -44,13 +57,9 @@ class MainApp extends Component {
           notifyType={this.props.notifier.type}
           notifySms={this.props.notifier.sms}
         />
-        {JSON.parse(localStorage.getItem("user")) &&
-        (JSON.parse(localStorage.getItem("user")).data.token ? true : false) ? (
-          <AppNavBar />
-        ) : null}
         <Suspense
-          fallback={
-            <Jumbotron fluid className="mt-4 mb-4 mr-auto ml-auto">
+          fallback = {
+            <Jumbotron fluid className="top-section mb-4 mr-auto ml-auto">
               <Container>
                 <h1>Loading......</h1>
                 <p>Please wait</p>
@@ -60,7 +69,7 @@ class MainApp extends Component {
         >
           <Switch>
             <Router history={history}>
-              <Route exact path="/" component={LandingPage} />
+              <PublicRoute exact path="/" component={LandingPage} />
               <PrivateRoute exact path="/home" component={HomePage} />
               <PrivateRoute exact path="/facilities" component={Facilities} />
               <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
