@@ -6,7 +6,7 @@ import { history } from "../store";
 import AppHeader from "./static/NavBar";
 import Footer from "./static/Footer";
 import Notification from "./static/Notification";
-const HomePage = lazy(() => import("./views/homepage"))
+const HomePage = lazy(() => import("./views/homepage"));
 const AllHotels = lazy(() => import("./views/allhotels"));
 const Hotel = lazy(() => import("./views/hotel"));
 const Facilities = lazy(() => import("./views/facilities"));
@@ -34,39 +34,40 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 class MainApp extends Component {
-
   render() {
     console.log(this.props.notifier);
     return (
       <>
         <AppHeader />
-        <Notification
-          notifyType={this.props.notifier.type}
-          notifySms={this.props.notifier.sms}
-        />
-        <Suspense
-          fallback = {
-            <Jumbotron fluid className="top-section mb-4 mr-auto ml-auto">
-              <Container>
-                <h1>Loading......</h1>
-                <p>Please wait</p>
-              </Container>
-            </Jumbotron>
-          }
-        >
-          <Switch>
-            <Router history={history}>
-              <Route exact path="/" component={HomePage} />
-              <PrivateRoute exact path="/allHotels" component={AllHotels} />
-              <PrivateRoute exact path="/hotel" component={Hotel} />
-              <PrivateRoute exact path="/facilities" component={Facilities} />
-              <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
-              <Route exact path="/contactUs" component={ContactUs} />
-              <Route exact path="/aboutpage" component={Aboutpage} />
-              {/* <Route exact path="*" component={NotFound} /> */}
-            </Router>
-          </Switch>
-        </Suspense>
+        <div className="main-container">
+          <Notification
+            notifyType={this.props.notifier.type}
+            notifySms={this.props.notifier.sms}
+          />
+          <Suspense
+            fallback={
+              <Jumbotron fluid className="top-section mb-4 mr-auto ml-auto">
+                <Container>
+                  <h1>Loading......</h1>
+                  <p>Please wait</p>
+                </Container>
+              </Jumbotron>
+            }
+          >
+            <Switch>
+              <Router history={history}>
+                <Route exact path="/" component={HomePage} />
+                <PrivateRoute exact path="/allHotels" component={AllHotels} />
+                <PrivateRoute exact path="/hotel" component={Hotel} />
+                <PrivateRoute exact path="/facilities" component={Facilities} />
+                <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
+                <Route exact path="/contactUs" component={ContactUs} />
+                <Route exact path="/aboutpage" component={Aboutpage} />
+                {/* <Route exact path="*" component={NotFound} /> */}
+              </Router>
+            </Switch>
+          </Suspense>
+        </div>
         <Footer />
       </>
     );

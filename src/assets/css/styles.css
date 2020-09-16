@@ -1,6 +1,9 @@
 body {
     overflow-x: hidden;
 }
+.main-container {
+    min-height: 33rem;
+}
 
 /* -------footer css-------------------------- */
 li {
