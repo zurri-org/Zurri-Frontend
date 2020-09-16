@@ -13,7 +13,9 @@ const PageSection = ({ heading, sectionColor, appartments }) => {
           {appartments.map((appartment, index) => (
             <Col xs={12} sm={6} md={4} className="mb-4" key={index}>
               <Card className="rooms-card">
-                <Card.Img variant="top" src={hotelImage} />
+                <a href="/hotel">
+                  <Card.Img variant="top" src={hotelImage} />
+                </a>
                 <Card.Body>
                   <Card.Text>
                     {appartment.name}
