@@ -13,6 +13,7 @@ const Facilities = lazy(() => import("./views/facilities"));
 const Aboutpage = lazy(() => import("./views/aboutpage"));
 const ContactUs = lazy(() => import("./views/contactus"));
 const Rooms = lazy(() => import("./views/rooms&rates"));
+const Flights = lazy(() => import ("./views/flight"));
 // const NotFound = lazy(() => import("./views/notFound"));
 
 //for skipping authentication for development uncomment the line below.
@@ -61,6 +62,7 @@ class MainApp extends Component {
                 <PrivateRoute exact path="/hotel" component={Hotel} />
                 <PrivateRoute exact path="/facilities" component={Facilities} />
                 <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
+                <PrivateRoute exact path="/flights" component={Flights} />
                 <Route exact path="/contactUs" component={ContactUs} />
                 <Route exact path="/aboutpage" component={Aboutpage} />
                 {/* <Route exact path="*" component={NotFound} /> */}
