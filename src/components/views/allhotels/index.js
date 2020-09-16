@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Form, Button, Col } from "react-bootstrap";
 import PageSection from "../../static/section";
-const LandingPage = () => {
+const AllHotels = () => {
   const appartments = [
         { name: "Arsenal Suits" },
         { name: "Chelsea Suits" },
@@ -53,4 +53,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default AllHotels;

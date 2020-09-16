@@ -6,8 +6,9 @@ import { history } from "../store";
 import AppHeader from "./static/NavBar";
 import Footer from "./static/Footer";
 import Notification from "./static/Notification";
-const LandingPage = lazy(() => import("./views/landingPage"));
-const HomePage = lazy(() => import("./views/homepage"));
+const HomePage = lazy(() => import("./views/homepage"))
+const AllHotels = lazy(() => import("./views/allhotels"));
+const Hotel = lazy(() => import("./views/hotel"));
 const Facilities = lazy(() => import("./views/facilities"));
 const Aboutpage = lazy(() => import("./views/aboutpage"));
 const ContactUs = lazy(() => import("./views/contactus"));
@@ -27,20 +28,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
         <Component {...props} />
       ) : (
         <Redirect to="/" />
-      )
-    }
-  />
-);
-// defining public route
-const PublicRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      JSON.parse(localStorage.getItem("user")) &&
-      (JSON.parse(localStorage.getItem("user")).data.token ? true : false) ? (
-        <Redirect to="/home" />
-      ) : (
-        <Component {...props} />
       )
     }
   />
@@ -69,11 +56,12 @@ class MainApp extends Component {
         >
           <Switch>
             <Router history={history}>
-              <PublicRoute exact path="/" component={LandingPage} />
-              <PrivateRoute exact path="/home" component={HomePage} />
+              <Route exact path="/" component={HomePage} />
+              <PrivateRoute exact path="/allHotels" component={AllHotels} />
+              <PrivateRoute exact path="/hotel" component={Hotel} />
               <PrivateRoute exact path="/facilities" component={Facilities} />
               <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
-              <PrivateRoute exact path="/contactUs" component={ContactUs} />
+              <Route exact path="/contactUs" component={ContactUs} />
               <Route exact path="/aboutpage" component={Aboutpage} />
               {/* <Route exact path="*" component={NotFound} /> */}
             </Router>

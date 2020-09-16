@@ -70,12 +70,14 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto mr-4 nav-bar-custom font-14">
-            <Nav.Link href="/home">HOME</Nav.Link>
+            <Nav.Link href="/">HOME</Nav.Link>
             <Nav.Link href="/aboutpage">ABOUT US</Nav.Link>
+            <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
             {data != null ? (
               data.user.name != null ? (
                 <>
-                  <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
+                  <Nav.Link href="/allhotels">HOTELS</Nav.Link>
+                  <Nav.Link href="/flights">FLIGHTS</Nav.Link>
                   <Nav.Link href="/" className="custom-color">
                     HELLO:{" "}
                     <strong className="custom-color">{data.user.name}</strong>
