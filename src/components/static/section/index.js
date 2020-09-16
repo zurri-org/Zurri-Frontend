@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Container, Card, Col } from "react-bootstrap";
 import hotelImage from "../../../assets/img/bg1.jpg";
-const PageSection = ({ heading, sectionColor, appartments }) => { 
+const PageSection = ({ heading, sectionColor, appartments }) => {
   const viewMoreUrl = sectionColor ? "/rooms&rates" : "/facilities";
   return (
     <section className={sectionColor ? "section rooms-color" : "section"}>

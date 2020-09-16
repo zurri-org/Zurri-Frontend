@@ -136,7 +136,7 @@ const Login = (props) => {
       </Modal.Body>
       <Modal.Footer>
         <p className="font-12">
-          Have and account, click{" "}
+          Have an account, click{" "}
           <a href="/" className="text-primary">
             here to login
           </a>
@@ -145,6 +145,7 @@ const Login = (props) => {
     </Modal>
   );
 };
+
 const mapStateToProps = ({ Auth }) => {
   const { auth_error, user_details, loading } = Auth;
   return { auth_error, user_details, loading };

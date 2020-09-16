@@ -36,7 +36,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 class MainApp extends Component {
   render() {
-    console.log(this.props.notifier);
     return (
       <>
         <AppHeader />
