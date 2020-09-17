@@ -1,25 +1,24 @@
 import React from "react";
-import { Jumbotron, Container } from "react-bootstrap";
+import { Container, Jumbotron } from "react-bootstrap";
 
-const HomePage = () => {
+const Flights = () => {
     return (
       <>
         <Container className="top-section">
           <Jumbotron>
-            <h1>Home Page!</h1>
-            <p>This is the space for Home page</p>
+            <h1>Flights Page!</h1>
+            <p>This is the space for Flights page</p>
             <p>Its under development please...</p>
           </Jumbotron>
         </Container>
         <Container className="top-section">
           <Jumbotron>
-            <h1>Home Page!</h1>
-            <p>This is the space for Home page</p>
+            <h1>Flights Page!</h1>
+            <p>This is the space for Flights page</p>
             <p>Its under development please...</p>
           </Jumbotron>
         </Container>
       </>
     );
 }
-
-export default HomePage;
+export default Flights

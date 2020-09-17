@@ -40,7 +40,7 @@ const Login = (props) => {
               validationSchema={Yup.object({
                 email: Yup.string()
                   .email("Invalid email")
-                  .required("Enter your password"),
+                  .required("Enter your email"),
                 password: Yup.string().required("Password is required").min(8, "Atleast 8 Characters")
               })}
               onSubmit={(values, { setSubmitting }) => {

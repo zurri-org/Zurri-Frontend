@@ -44,19 +44,13 @@ const Facilities = () => {
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted" id="small"></small>
-                        
-                       
-
                     </Card.Footer>
                 </Card>
                 <Card>
                     <Card.Img variant="top" src={Fnb} className="services" id="sev1" onMouseOver={()=>{
                         let element= document.getElementById("sev1");
                         element.classList.toggle("opacity");
-                        
-                        
                     }
-                        
                     } />
                     <Card.Body>
                         <Card.Title>Food and Beverages</Card.Title>
