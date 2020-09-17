@@ -16,7 +16,7 @@ const Hotel = () => {
             <Row>
               <Col sm={6} xs={6} className="landing-header">
                 <div>
-                  <h1 className="mt-4">Sparkle, Aluxury Hotel</h1>
+                  <h1 className="mt-4">Zurri, Aluxury Hotel</h1>
                   <p className="mt-4">This is the space for Home page</p>
                   <Button size="md" className="mt-4">
                     BOOK NOW
