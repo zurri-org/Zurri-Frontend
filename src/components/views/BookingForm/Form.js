@@ -15,7 +15,6 @@ class BookingForm extends React.Component {
       Occupants: ''
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleAdd = this.handleAdd.bind(this);
   }
 
   handleChange(e) {
@@ -28,31 +27,6 @@ class BookingForm extends React.Component {
     })
   }
 
-  handleAdd(e) {
-
-    // Prevent from page reloading after submit
-
-    e.preventDefault();
-    let tempApt = {
-      Names: this.state.Names,
-      Email: this.state.Email,
-      CheckIn: this.state.CheckIn + ' ' + this.state.Time,
-      Checkout: this.state.Checkout,
-      Occupants: this.state.Occupants
-    };
-
-    this.props.BookingForm(tempApt);
-
-    this.setState({
-      Names: '',
-      Email: '',
-      CheckIn: '',
-      Time: '',
-      Checkout: '',
-      Occupants: ''
-    })
-  }
-
   render() {
     return (
       <div
@@ -62,9 +36,7 @@ class BookingForm extends React.Component {
         }>
 
         {/* Header  */}
-        <div className="apt-addheading card-header bg-primary text-white"
-          onClick={this.props.toggleForm}
-        >
+        <div className="apt-addheading card-header bg-primary text-white" >
           <FaPlus /> Book with us today
                 </div>
 
@@ -179,18 +151,18 @@ class BookingForm extends React.Component {
               </div>
             </div>
 
-          <div className="form-group form-row mb-0">
-            <div className="offset-md-2 col-md-6">
-              <button
-                type="submit"
-                className="btn btn-primary d-block ml-auto"
-              >
-                Book Now
+            <div className="form-group form-row mb-0">
+              <div className="offset-md-2 col-md-6">
+                <button
+                  type="submit"
+                  className="btn btn-primary d-block ml-auto"
+                >
+                  Book Now
                             </button>
+              </div>
             </div>
-          </div>
           </form>
-      </div>
+        </div>
       </div >
     )
   }
