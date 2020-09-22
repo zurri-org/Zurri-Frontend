@@ -1,6 +1,9 @@
 body {
     overflow-x: hidden;
 }
+.main-container {
+    min-height: 33rem;
+}
 
 /* -------footer css-------------------------- */
 li {
@@ -27,12 +30,7 @@ footer {
     text-align: center;
 }
 /*.......Aboutpage css....*/
-.background {
-    background: url("../img/bg2.jpg") no-repeat center center;
-    height: 60vh;
-    padding: 10%;
-    width: 100%;
-}
+
 #mission {
     text-align: center;
 }
@@ -44,6 +42,19 @@ footer {
 }
 .profiles li {
     float: left;
+}
+.background{
+    background-image: url('../img/bg5.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #9695e4;
+    height: 100vh;
+    width: 100%;
+    width: 100vmax;
+    padding-left: 10%;
+    margin: 0;
+
 }
 
 
@@ -113,7 +124,7 @@ footer {
 
 
 /* ------------custom css of black nevigation bar---------- */
-.dark-nav-bar {
+/* .dark-nav-bar {
     margin-top: 100px;
     height: auto;
     background-color: #242424;
@@ -183,6 +194,9 @@ footer {
     background-color: #666812;
     border-color: #666812;
 }
+.collapse> .navbar-nav> .color-primary {
+    color: #007bff;
+} */
 
 /* @media query css */
 @media(max-width: 992px) {
@@ -248,6 +262,51 @@ footer {
     }
 }
 
+/* -----------facilities css---------- */
+.background2{
+    background-image: url('../img/bg3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    
+    background-color: rgb(227, 227, 241);
+    
+    height: 100vh;
+    width: 100%;
+}
+.cardImage{
+    width: 70%;
+    height: 50%;
+    border-radius: 20%;
+}
+.services{
+    width: 100%;
+    height: 50%;
+    border-radius: 20%;
+    opacity: 0.5;
+
+}
+.opacity{
+    width: 100%;
+    height: 50%;
+    border-radius: 20%;
+    opacity: 1.0;
+
+}
+
+.cardText{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    right: 0%;
+    top: 52rem;
+    background-color: whitesmoke;
+    width: 30%;
+    text-align: center;
+    line-height: 2.2rem;
+    border-radius: 11%;
+    margin-right:7%;
+}
+
 
 /* -----------home page css---------- */
 .landing-section {
@@ -257,6 +316,10 @@ footer {
     background-size: cover;
     background-color: #464646;
     height: 100vh;
+    margin-top: 6rem;
+}
+.top-section {
+    margin-top: 6rem;
 }
 .landing-header {
     background-color: hsl(0deg 0% 54% / 30%);
@@ -352,4 +415,24 @@ h1 {
 }
 .errorInput {
     border-bottom: 1px solid red !important;
+}
+.home-search {
+    margin-top: 7rem;
+}
+.home-search> .mx-auto> .search-form {
+    border-radius: 0px;
+    width: 80%;
+}
+.no-border-radius {
+    border-radius: 0px !important;
+}
+.search-form> .form-control {
+    width: 75%;
+}
+.search-form> .custom-btn-block {
+    color: #fff;
+    background-color: #666812;
+    border-color: #666812;
+    height: 50px;
+    width: 100px;
 }

@@ -3,10 +3,11 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { connect } from "react-redux";
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
-import { register_user_request, close_modal } from "../../../actions/authActions";
+import { register_user_request, close_registration } from "../../../actions/authActions";
+import Loader from "../../static/Loader";
 
 const Register = (props) => {
-  const { register_user_request, ...rest } = props;
+  const { register_user_request, close_registration, loading, ...rest } = props;
   return (
     <Modal
       {...rest}
@@ -16,7 +17,7 @@ const Register = (props) => {
       backdrop="static"
       keyboard={false}
     >
-      <Modal.Header closeButton onClick={()=> props.close_modal()}>
+      <Modal.Header closeButton onClick={() => props.close_registration()}>
         <Modal.Title
           id="contained-modal-title-vcenter"
           className="custom-color"
@@ -180,9 +181,14 @@ const Register = (props) => {
                       disabled={isSubmitting}
                       onClick={handleSubmit}
                     >
-                      <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
-                    Register
-                  </Button>
+                      {loading === "registering" ?
+                        (<Loader message="Registering..." />) :
+                        (<>
+                          <i className="fa fa-check-circle-o" aria-hidden="true"></i>{" "}
+                          Register
+                        </>)
+                      }
+                    </Button>
                   </Form>
                 )}
             </Formik>
@@ -200,9 +206,10 @@ const Register = (props) => {
     </Modal>
   );
 };
+
 const mapStateToProps = ({ Auth }) => {
-  const { auth_error, user_details } = Auth;
-  return { auth_error, user_details };
+  const { auth_error, user_details, loading } = Auth;
+  return { auth_error, user_details, loading };
 }
 
-export default connect(mapStateToProps, { register_user_request, close_modal })(Register);
+export default connect(mapStateToProps, { register_user_request, close_registration })(Register);
