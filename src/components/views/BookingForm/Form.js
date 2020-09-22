@@ -111,7 +111,7 @@ class BookingForm extends React.Component {
 
             <div className="form-group form-row">
               <label
-                className="col-md-2 col-form-label text-md-right"
+                className="col-md-4 col-form-label text-md-right"
                 htmlFor="Checkin"
               >
                 Check In Date
@@ -126,26 +126,28 @@ class BookingForm extends React.Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <label
-                className="col-md-2 col-form-label text-md-right"
-                htmlFor="Time"
-              >
-                Time
-                        </label>
-              <div className="col-md-4">
-                <input
-                  type="time"
-                  className="form-control"
-                  name="Time"
-                  id="Time"
-                  value={this.state.Time}
-                  onChange={this.handleChange}
-                />
+              <div className="form-group form-row">
+                <label
+                  className="col-md-6 mt-2 col-form-label text-md-right"
+                  htmlFor="Time"
+                >
+                  Time
+                          </label>
+                <div className="col-md-4">
+                  <input
+                    type="time"
+                    className="form-control"
+                    name="Time"
+                    id="Time"
+                    value={this.state.Time}
+                    onChange={this.handleChange}
+                  />
+                </div>
               </div>
 
               <div className="form-group form-row">
                 <label
-                  className="col-md-2 col-form-label text-md-right"
+                  className="col-md-6 col-form-label text-md-right"
                   htmlFor="Checkout"
                 >
                   Check Out Date
@@ -163,7 +165,7 @@ class BookingForm extends React.Component {
               </div>
 
               <div className="form-group form-row">
-                <label className="col-md-2 text-md-right" htmlFor="Occupants">
+                <label className="col-md-6 text-md-right" htmlFor="Occupants">
                   Number of Occupants
                         </label>
                 <input
@@ -178,12 +180,12 @@ class BookingForm extends React.Component {
             </div>
 
           <div className="form-group form-row mb-0">
-            <div className="offset-md-2 col-md-10">
+            <div className="offset-md-2 col-md-6">
               <button
                 type="submit"
-                className="btn btn-success d-block ml-auto"
+                className="btn btn-primary d-block ml-auto"
               >
-                Check Availability
+                Book Now
                             </button>
             </div>
           </div>

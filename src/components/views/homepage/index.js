@@ -1,10 +1,12 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Modal, Container, Row, Col, Button } from "react-bootstrap";
 import AboutSection from "./aboutSection";
 import RoomSection from "./roomSection";
+import BookingForm from "../BookingForm/Form";
 import FacilitiesSection from "./facilitiesSection";
 
 const HomePage = () => {
+    const [show, setShow] = React.useState(false);
     return (
         <>
             <section className="row landing-section">
@@ -14,7 +16,17 @@ const HomePage = () => {
                             <div>
                                 <h1 className="mt-4">Sparkle, Aluxury Hotel</h1>
                                 <p className="mt-4">This is the space for Home page</p>
-                                <Button size="md" className="mt-4">BOOK NOW</Button>
+                                <Button size="md" className="mt-4" onClick={() => setShow(true)}>BOOK NOW</Button>
+                                <Modal
+                                    show={show}
+                                    onHide={() => setShow(false)}
+                                    dialogClassName="modal-90w"
+                                    aria-labelledby="example-custom-modal-styling-title"
+                                >
+                                <Modal.Body>
+                                    <BookingForm />
+                                </Modal.Body>
+                                </Modal>
                             </div>
                         </Col>
                     </Row>
