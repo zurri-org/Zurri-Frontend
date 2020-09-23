@@ -84,6 +84,9 @@ footer {
 .p-color {
     color: #8b8b2d;
 }
+.home-color {
+    color: #36348A !important;
+}
 .input-group-custom {
     width: 7rem;
     border-color: aliceblue;
@@ -377,4 +380,14 @@ h1 {
 }
 .no-border-radius {
     border-radius: 0px !important;
+}
+.custom-div {
+    border: 1px solid #36348A;
+    color: #36348A;
+    border-radius: 2px;
+}
+.custom-div:hover {
+    cursor: pointer;
+    border: 1px solid #2927a0;
+    color: #2927c9;
 }

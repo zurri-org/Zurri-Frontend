@@ -95,7 +95,7 @@ const HomePage = () => {
                           <InputGroup.Prepend>
                             <InputGroup.Text className="home-prepend font-12">
                               <i
-                                class="fa fa-arrow-down"
+                                className="fa fa-arrow-down"
                                 aria-hidden="true"
                               ></i>
                             </InputGroup.Text>
@@ -224,24 +224,97 @@ const HomePage = () => {
           </Row>
         </Container>
       </section>
+
       <Row>
         <Col md={12}>
-          <Row>
-            <Col md={6} sm={6}>
-              Hello there
+          <Row className="pr-3">
+            <Col md={5} sm={5} className="ml-auto d-flex">
+              <div className="text-right m-auto">
+                <h2 className="custom-color">Connecting All Ends Of </h2>
+                <h2 className="custom-color">
+                  The World To <span className="home-color">Uganda</span>
+                </h2>
+              </div>
             </Col>
-            <Col md={6} sm={6}>
-              <img src={mapImage} alt="home image" />
+            <Col md={5} sm={5} className="mr-auto">
+              <img
+                src={mapImage}
+                alt="Map Illustration"
+                className="mr-4 mt-4 img-fluid"
+              />
             </Col>
           </Row>
         </Col>
         <Col md={12}>
           <Row>
-            <Col md={6} sm={6}>
-              Hello there
+            <Col md={6} sm={6} className="ml-auto">
+              <img
+                src={airImage}
+                className="img-fluid"
+                alt="Air Illustration"
+              />
             </Col>
-            <Col md={6} sm={6}>
-              <img src={airImage} alt="home image" />
+            <Col md={4} sm={4} className="mr-auto d-flex">
+              <div className="text-left m-auto">
+                <h2 className="custom-color">Making Your Travel</h2>
+                <h2 className="custom-color">Plans Easy And</h2>
+                <h2 className="home-color">Seamless</h2>
+              </div>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+
+      <Row className="d-flex">
+        <Col md={12} className="text-center">
+          <h2>Most Visted Places</h2>
+        </Col>
+        <Col md={8} className="m-auto">
+          <Row className="mx-auto">
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Kampala</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Entebbe</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Jinja</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Mbale</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Fort Portal</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>The Rwenzori</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Karamoja</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Gulu</h3>
+              </div>
+            </Col>
+            <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
+              <div className="text-right m-auto">
+                <h3>Arua</h3>
+              </div>
             </Col>
           </Row>
         </Col>
