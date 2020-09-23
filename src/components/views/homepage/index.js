@@ -3,7 +3,6 @@ import { Modal, Container, Row, Col, Button } from "react-bootstrap";
 import AboutSection from "./aboutSection";
 import RoomSection from "./roomSection";
 import BookingForm from "../BookingForm/Form";
-import FacilitiesSection from "./facilitiesSection";
 
 const HomePage = () => {
     const [show, setShow] = React.useState(false);
@@ -34,7 +33,6 @@ const HomePage = () => {
             </section>
             <AboutSection />
             <RoomSection />
-            <FacilitiesSection />
         </>
     )
 }
