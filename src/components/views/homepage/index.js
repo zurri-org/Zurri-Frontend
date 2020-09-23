@@ -8,6 +8,8 @@ import {
   Form,
   InputGroup,
 } from "react-bootstrap";
+import mapImage from "../../../assets/img/mapsnip.JPG";
+import airImage from "../../../assets/img/airsnip.JPG";
 
 const HomePage = () => {
   return (
@@ -222,6 +224,28 @@ const HomePage = () => {
           </Row>
         </Container>
       </section>
+      <Row>
+        <Col md={12}>
+          <Row>
+            <Col md={6} sm={6}>
+              Hello there
+            </Col>
+            <Col md={6} sm={6}>
+              <img src={mapImage} alt="home image" />
+            </Col>
+          </Row>
+        </Col>
+        <Col md={12}>
+          <Row>
+            <Col md={6} sm={6}>
+              Hello there
+            </Col>
+            <Col md={6} sm={6}>
+              <img src={airImage} alt="home image" />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
     </>
   );
 };
