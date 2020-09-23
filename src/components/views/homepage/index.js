@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import mapImage from "../../../assets/img/mapsnip.JPG";
 import airImage from "../../../assets/img/airsnip.JPG";
+import panelImage from "../../../assets/img/panel.JPG";
 
 const HomePage = () => {
   return (
@@ -265,12 +266,12 @@ const HomePage = () => {
         </Col>
       </Row>
 
-      <Row className="d-flex">
+      <Row>
         <Col md={12} className="text-center">
           <h2>Most Visted Places</h2>
         </Col>
         <Col md={8} className="m-auto">
-          <Row className="mx-auto">
+          <Row className="mx-auto d-flex text-center">
             <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
               <div className="text-right m-auto">
                 <h3>Kampala</h3>
@@ -314,6 +315,26 @@ const HomePage = () => {
             <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
               <div className="text-right m-auto">
                 <h3>Arua</h3>
+              </div>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+
+      <Row className="mt-2 mb-2">
+        <Col md={12}>
+          <Row>
+            <Col md={6} sm={6} className="ml-auto">
+              <img
+                src={panelImage}
+                className="img-fluid"
+                alt="Air Illustration"
+              />
+            </Col>
+            <Col md={4} sm={4} className="mr-auto d-flex">
+              <div className="text-left m-auto">
+                <h2 className="custom-color">Are You Failing To Plan For</h2>
+                <h2 className="custom-color">Your Journey, Let Us <span className="home-color">Help</span></h2>
               </div>
             </Col>
           </Row>

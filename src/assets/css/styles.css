@@ -384,7 +384,7 @@ h1 {
 .custom-div {
     border: 1px solid #36348A;
     color: #36348A;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 .custom-div:hover {
     cursor: pointer;
