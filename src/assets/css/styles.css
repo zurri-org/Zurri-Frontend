@@ -37,8 +37,6 @@ footer {
 .profiles img {
     border-radius: 50%;
     width: 35%;
-
-
 }
 .profiles li {
     float: left;
@@ -86,6 +84,9 @@ footer {
 .p-color {
     color: #8b8b2d;
 }
+.home-color {
+    color: #36348A !important;
+}
 .input-group-custom {
     width: 7rem;
     border-color: aliceblue;
@@ -102,18 +103,22 @@ footer {
 }
 
 .custom-purple {
-    background-color: #36348A;
+    background-color: #666812;
+    border-color: white;
+}
+.custom-purple:hover {
+    background-color: #9b9d24;
     border-color: white;
 }
 .btn-holder> .btn-custom:nth-child(2):hover {
     color: #fff;
-    background-color: #36348A;
+    background-color: #666812;
     border-color: #fff;
 }
 .btn-holder> .btn-custom:nth-child(2) {
-    color: #36348A;
+    color: #666812;
     background-color: #fff;
-    border-color: #36348A;
+    border-color: #666812;
 }
 .dropdown-section > .dropdown > .dropdown-toggle::after {
     margin-left: 2em;
@@ -121,83 +126,6 @@ footer {
 .navbar-custom > .navbar-brand > img {
     width: auto;
 }
-
-
-/* ------------custom css of black nevigation bar---------- */
-/* .dark-nav-bar {
-    margin-top: 100px;
-    height: auto;
-    background-color: #242424;
-}
-.dropdown-section > .header {
-    color: white;
-    font-family: Playfair Display SC;
-    margin: auto;
-}
-.dropdown-section > .dropdown > .dropdown-toggle {
-    color: white;
-}
-.dropdown-section > .dropdown > .dropdown-menu {
-    background-color: #666627;
-    min-width: 13rem;
-}
-.dropdown-section > .dropdown > .dropdown-menu > .dropdown-item {
-    color: white;
-}
-.dropdown-section> .dropdown> .dropdown-menu> .dropdown-item:hover {
-    background-color: #969649;
-}
-.dropdown-section {
-    border-left: 2px solid white;
-}
-.initial {
-    border-left: none;
-}
-.dropdown-section > .dropdown > .btn {
-    border-color: transparent;
-    background-color: transparent;
-}
-.dropdown-section>.btn-primary:not(:disabled):not(.disabled).active,
-.btn-primary:not(:disabled):not(.disabled):active,
-.show > .btn-primary.dropdown-toggle {
-    border-color: transparent;
-    background-color: transparent;
-}
-.dropdown-section> .btn-primary:not(:disabled):not(.disabled).active:focus,
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-primary.dropdown-toggle:focus,
-.btn-primary.focus,
-.btn-primary:focus {
-
-    box-shadow: none;
-}
-.check-btn {
-    font-size: 15px;
-    font-weight: 500;
-    height: 85px;
-    width: 11rem;
-    border-radius: 0;
-    background-color: #666812;
-    border-color: #666812;
-    margin-left: 5.5rem;
-}
-.check-btn:hover {
-    background-color: #666812;
-    border-color: #666666;
-}
-.dark-nav-bar > .navbar > .collapse > .nav-item > .btn {
-    font-size: 15px;
-    font-weight: 500;
-    height: 85px;
-    width: 11rem;
-    border-radius: 0;
-    background-color: #666812;
-    border-color: #666812;
-}
-.collapse> .navbar-nav> .color-primary {
-    color: #007bff;
-} */
-
 /* @media query css */
 @media(max-width: 992px) {
     .navbar-collapse {
@@ -309,6 +237,18 @@ footer {
 
 
 /* -----------home page css---------- */
+.home-section {
+    background-image: url('../img/bg2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+    height: 60vh;
+    margin-top: 6rem;
+}
+.home-card {
+    border-radius: 2rem;
+}
 .landing-section {
     background-image: url('../img/bg2.jpg');
     background-position: center center;
@@ -339,6 +279,15 @@ footer {
 .landing-header > div > h1 {
     font-size: 48px;
 }
+.home-prepend {
+    background-color: transparent;
+    border-color: black;
+    color: #666812;
+}
+.home-input {
+    border: 1px solid black;
+    border-left: none;
+}
 .section-header {
     border-bottom: 3px solid #666812;
     margin: 50px auto;
@@ -357,6 +306,16 @@ h1 {
     font-family: Roboto;
     line-height: 24px;
     text-transform: capitalize;
+}
+.search-btn {
+    background-color: #666812;
+    border-color: #666812;
+    color: white;
+    width: 100%;
+}
+.search-btn:hover {
+    background-color: #77791d;
+    border-color: #666812;
 }
 .custom-btn {
     background-color: transparent;
@@ -389,14 +348,17 @@ h1 {
 /* registration input css */
 .custom-input:-ms-input-placeholder {
     color: #8b8b2d;
+    font-size: 13px;
 }
 .custom-input::placeholder {
+    font-size: 13px;
     color: #8b8b2d;
     opacity: 1; /* Firefox */
 }
 .custom-input::-ms-input-placeholder {
     /* Microsoft Edge */
     color: #8b8b2d;
+    font-size: 13px;
 }
 .register > .form-group > .custom-input {
     border: 1px solid #8b8b2d;
@@ -416,23 +378,16 @@ h1 {
 .errorInput {
     border-bottom: 1px solid red !important;
 }
-.home-search {
-    margin-top: 7rem;
-}
-.home-search> .mx-auto> .search-form {
-    border-radius: 0px;
-    width: 80%;
-}
 .no-border-radius {
     border-radius: 0px !important;
 }
-.search-form> .form-control {
-    width: 75%;
+.custom-div {
+    border: 1px solid #36348A;
+    color: #36348A;
+    border-radius: 4px;
 }
-.search-form> .custom-btn-block {
-    color: #fff;
-    background-color: #666812;
-    border-color: #666812;
-    height: 50px;
-    width: 100px;
+.custom-div:hover {
+    cursor: pointer;
+    border: 1px solid #2927a0;
+    color: #2927c9;
 }
