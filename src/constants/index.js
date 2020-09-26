@@ -20,3 +20,11 @@ export const authConstants = {
     login_user_success: "login_user_successfull",
     logout_user: "logout_user_request"
 };
+
+export const hotelConstants = {
+    hoteLoading: "action_loading",
+    //fetching hotels
+    fetch_hotels: "fetch_hotel_request",
+    fetch_hotels_success: "fetch_hotel_request_successfull",
+    fetch_hotels_fail: "fetch_hotel_request_failure",
+};

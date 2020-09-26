@@ -9,6 +9,7 @@ const authInstance = axios.create({
 });
 
 export default {
+    //auth api
     registerUser: (user_data) => authInstance({
         "method": "POST",
         "url": "/auth/register",
@@ -18,5 +19,8 @@ export default {
         "method": "POST",
         "url": "/auth/login",
         "data": user_data
-    })
+    }),
+    //hotel api
+    // fetchHotels: () => hotel
+
 };

@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import { Row, Form, Button, Col } from "react-bootstrap";
-import PageSection from "../../static/section";
-const AllHotels = () => {
+import HotelType from "./hotelType";
+const AllHotels = ({fetchHotels}) => {
+  useEffect(() => {
+    fetchHotels();
+    // return () => {
+    //   cleanup
+    // }
+  });
   const appartments = [
         { name: "Arsenal Suits" },
         { name: "Chelsea Suits" },
@@ -34,17 +41,17 @@ const AllHotels = () => {
       </Row>
 
       {/* Reusable component sections */}
-      <PageSection
+      <HotelType
         heading="HOTELS"
         sectionColor="rooms-color"
         appartments={appartments}
       />
-      <PageSection
+      <HotelType
         heading="RESORTS"
         sectionColor=""
         appartments={appartments}
       />
-      <PageSection
+      <HotelType
         heading="MOTELS"
         sectionColor="rooms-color"
         appartments={appartments}
@@ -53,4 +60,8 @@ const AllHotels = () => {
   );
 };
 
-export default AllHotels;
+const mapStateToProps = ({hotels}) => {
+  return (hotels);
+}
+
+export default connect(mapStateToProps, { fetchHotels })(AllHotels);
