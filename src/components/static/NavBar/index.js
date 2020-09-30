@@ -6,7 +6,7 @@ import {
   Image,
   Button,
 } from "react-bootstrap";
-import imageLogo from "../../../assets/img/logo.JPG";
+import imageLogo from "../../../assets/img/logo.png";
 import { useEffect } from "react";
 import Register from "../../views/auth/register";
 import { open_registration, open_login, logout } from "../../../actions/authActions";
@@ -70,7 +70,7 @@ const AppHeader = ({ close_modal_register, open_registration, open_login, close_
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto mr-4 nav-bar-custom font-14">
-            <Nav.Link href="/home">HOME</Nav.Link>
+            <Nav.Link href="/">HOME</Nav.Link>
             <Nav.Link href="/aboutpage">ABOUT US</Nav.Link>
             <Nav.Link href="/contactUs">CONTACT US</Nav.Link>
             {data != null ? (
