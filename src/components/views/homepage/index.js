@@ -22,7 +22,7 @@ const HomePage = () => {
               <Card className="home-card p-4">
                 <Card.Body>
                   <Card.Title className="text-center">
-                    Find Flight From Uganda
+                    Find Flights From Uganda
                   </Card.Title>
                   <Form>
                     <Form.Row className="mt-2">
