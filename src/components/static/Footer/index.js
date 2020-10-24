@@ -9,7 +9,7 @@ import{
 class Footer extends Component{
   render(){
     return(
-      <footer className="mt-auto">
+      <footer className="mt-auto p-5">
       <div className="dark-nav-bar">
       <Container>
         <Row>
@@ -36,8 +36,8 @@ class Footer extends Component{
           </Col>
           </Row>
           </Container>
-        <div className="footer-bottom">
-          <p id="copyright" className="text-xs-centre"> &copy; {new Date().getFullYear()} figma inc. All rights reserved</p></div>
+        <div className="footer-bottom mt-3">
+          <p id="copyright" className="text-centre"> &copy; {new Date().getFullYear()} figma inc. All rights reserved</p></div>
       </div>
     </footer>
     );

@@ -22,7 +22,7 @@ const HomePage = () => {
               <Card className="home-card p-4">
                 <Card.Body>
                   <Card.Title className="text-center">
-                    Find Flight From Uganda
+                    Find Flights From Uganda
                   </Card.Title>
                   <Form>
                     <Form.Row className="mt-2">
@@ -42,7 +42,7 @@ const HomePage = () => {
                           <Form.Control
                             size="md"
                             className="home-input custom-input"
-                            placeholder="CITY OR AIRPORT"
+                            placeholder="City or Airport"
                           />
                         </InputGroup>
                       </Col>
@@ -62,7 +62,7 @@ const HomePage = () => {
                           <Form.Control
                             size="md"
                             className="home-input custom-input"
-                            placeholder="CITY OR AIRPORT"
+                            placeholder="City or Airport"
                           />
                         </InputGroup>
                       </Col>
@@ -76,7 +76,7 @@ const HomePage = () => {
                           <InputGroup.Prepend>
                             <InputGroup.Text className="home-prepend font-12">
                               <i
-                                className="fa fa-location-arrow"
+                                className="fa fa-calendar"
                                 aria-hidden="true"
                               ></i>
                             </InputGroup.Text>
@@ -84,7 +84,7 @@ const HomePage = () => {
                           <Form.Control
                             size="md"
                             className="home-input custom-input"
-                            placeholder="CITY OR AIRPORT"
+                            placeholder="Departure date"
                           />
                         </InputGroup>
                       </Col>
@@ -96,7 +96,7 @@ const HomePage = () => {
                           <InputGroup.Prepend>
                             <InputGroup.Text className="home-prepend font-12">
                               <i
-                                className="fa fa-arrow-down"
+                                className="fa fa-calendar"
                                 aria-hidden="true"
                               ></i>
                             </InputGroup.Text>
@@ -104,7 +104,7 @@ const HomePage = () => {
                           <Form.Control
                             size="md"
                             className="home-input custom-input"
-                            placeholder="CITY OR AIRPORT"
+                            placeholder="Arrival date"
                           />
                         </InputGroup>
                       </Col>
@@ -112,21 +112,20 @@ const HomePage = () => {
                     <Form.Row className="mt-2">
                       <Col>
                         <Form.Label className="font-13 text-mute">
-                          Depart:
+                          Travelers:
                         </Form.Label>
                         <InputGroup>
                           <InputGroup.Prepend>
                             <InputGroup.Text className="home-prepend font-12">
                               <i
-                                className="fa fa-location-arrow"
-                                aria-hidden="true"
+                                  className="fa fa-arrow-down"
+                                  aria-hidden="true"
                               ></i>
                             </InputGroup.Text>
                           </InputGroup.Prepend>
                           <Form.Control
-                            size="md"
                             className="home-input custom-input"
-                            placeholder="FIRST CLASS"
+                            placeholder="2, First class"
                           />
                         </InputGroup>
                       </Col>
@@ -157,7 +156,7 @@ const HomePage = () => {
                           <InputGroup.Prepend>
                             <InputGroup.Text className="home-prepend font-12">
                               <i
-                                className="fa fa-map-marker"
+                                className="fa fa-calendar"
                                 aria-hidden="true"
                               ></i>
                             </InputGroup.Text>
@@ -165,7 +164,7 @@ const HomePage = () => {
                           <Form.Control
                             size="md"
                             className="home-input custom-input"
-                            placeholder="CITY OR AIRPORT"
+                            placeholder="Check in date"
                           />
                         </InputGroup>
                       </Col>
@@ -177,7 +176,7 @@ const HomePage = () => {
                           <InputGroup.Prepend>
                             <InputGroup.Text className="home-prepend font-12">
                               <i
-                                className="fa fa-map-marker"
+                                className="fa fa-calendar"
                                 aria-hidden="true"
                               ></i>
                             </InputGroup.Text>
@@ -185,7 +184,7 @@ const HomePage = () => {
                           <Form.Control
                             size="md"
                             className="home-input custom-input"
-                            placeholder="CITY OR AIRPORT"
+                            placeholder="Check out date"
                           />
                         </InputGroup>
                       </Col>
@@ -207,7 +206,7 @@ const HomePage = () => {
                           <Form.Control
                             size="md"
                             className="home-input custom-input"
-                            placeholder="FIRST CLASS"
+                            placeholder="Guests"
                           />
                         </InputGroup>
                       </Col>
@@ -228,7 +227,7 @@ const HomePage = () => {
 
       <Row>
         <Col md={12}>
-          <Row className="pr-3">
+          <Row className="pr-3 m-5">
             <Col md={5} sm={5} className="ml-auto d-flex">
               <div className="text-right m-auto">
                 <h2 className="custom-color">Connecting All Ends Of </h2>
@@ -247,7 +246,7 @@ const HomePage = () => {
           </Row>
         </Col>
         <Col md={12}>
-          <Row>
+          <Row className="m-5">
             <Col md={6} sm={6} className="ml-auto">
               <img
                 src={airImage}
@@ -265,13 +264,13 @@ const HomePage = () => {
           </Row>
         </Col>
       </Row>
-
-      <Row>
-        <Col md={12} className="text-center">
+      
+      <Row className="justify-content-center m-5">
+        <Col md={12} className="text-center mb-3">
           <h2>Most Visted Places</h2>
         </Col>
         <Col md={8} className="m-auto">
-          <Row className="mx-auto d-flex text-center">
+          <Row className="justify-content-center text-center">
             <Col md={3} sm={3} className="mr-4 d-flex mt-1 mb-2 custom-div">
               <div className="text-right m-auto">
                 <h3>Kampala</h3>
@@ -321,7 +320,7 @@ const HomePage = () => {
         </Col>
       </Row>
 
-      <Row className="mt-2 mb-2">
+      <Row className="m-5">
         <Col md={12}>
           <Row>
             <Col md={6} sm={6} className="ml-auto">
