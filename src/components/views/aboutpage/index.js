@@ -1,18 +1,14 @@
 import React from "react";
-import { Jumbotron, Container } from "react-bootstrap";
+import { Jumbotron, Container, Row, Col } from "react-bootstrap";
 const Aboutpage = () => {
     return (
       <div>
         <div className="background"></div>
-        <div id="mission">
           <Jumbotron fluid>
-            <Container>
+            <Row className="justify-content-center">
+                <Col md={6}>
               <h1>Mission</h1>
-              <p>
-                This is a modified jumbotron that occupies the entire horizontal
-                space of its parent.
-              </p>
-              <p>Our mission is to bring tourism to you</p>
+              <p>Our mission and vision is to bring tourism to you</p>
               <p>
                 It is with great pleasure that we offer you this medium through
                 which you can explore any tourist centre of your choice just by
@@ -24,12 +20,14 @@ const Aboutpage = () => {
                 and other tourist centres
               </p>
               <p>Your first choice can indeeed be your best choice!</p>
-            </Container>
-            <Container>
-              <h2>Our Origin</h2>
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+                <Col md={6}>
+              <h2>Our Story</h2>
               <p>
-                Zurri was inspired by the buildforsdg program hosted by
-                facebook, 2020
+                Zurri was inspired by the Build For SDG Cohort 2 program hosted by
+                facebook and Andela, 2020
               </p>
               <p>
                 We are young enthusiastic programmers who are so keen on making
@@ -44,9 +42,13 @@ const Aboutpage = () => {
                 and lifestyles, we bring the most peculiarity to everything we
                 do!
               </p>
-            </Container>
+              </Col>
+            </Row>
           </Jumbotron>
+        <div id="mission">
           <div className="profiles">
+              <h1>The Team</h1>
+              <div className="my-3">
             <ul>
               <li>
                 <img
@@ -97,6 +99,7 @@ const Aboutpage = () => {
                 <p> Ampaire Phemia</p>
               </li>
             </ul>
+            </div>
           </div>
         </div>
       </div>
