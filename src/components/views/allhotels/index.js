@@ -1,19 +1,23 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Row, Form, Button, Col } from "react-bootstrap";
+import { fetchHotels } from "../../../actions/hotelsActions";
 import HotelType from "./hotelType";
-const AllHotels = ({fetchHotels}) => {
+const AllHotels = ({
+  hotel_data,
+  loading,
+  hotel_error,
+  notifier,
+  fetchHotels,
+}) => {
   useEffect(() => {
     fetchHotels();
-    // return () => {
-    //   cleanup
-    // }
-  });
+  }, [fetchHotels]);
   const appartments = [
-        { name: "Arsenal Suits" },
-        { name: "Chelsea Suits" },
-        { name: "Manchester United Suits" },
-    ];
+    { name: "Arsenal Suits" },
+    { name: "Chelsea Suits" },
+    { name: "Manchester United Suits" },
+  ];
   return (
     <>
       <Row className="text-center d-block home-search mb-4">
@@ -46,11 +50,7 @@ const AllHotels = ({fetchHotels}) => {
         sectionColor="rooms-color"
         appartments={appartments}
       />
-      <HotelType
-        heading="RESORTS"
-        sectionColor=""
-        appartments={appartments}
-      />
+      <HotelType heading="RESORTS" sectionColor="" appartments={appartments} />
       <HotelType
         heading="MOTELS"
         sectionColor="rooms-color"
@@ -60,8 +60,11 @@ const AllHotels = ({fetchHotels}) => {
   );
 };
 
-const mapStateToProps = ({hotels}) => {
-  return (hotels);
+const mapStateToProps = ({Hotel}) => {
+  console.log(Hotel);
+  const { hotel_data, loading, hotel_error, notifier } = Hotel;
+  return { hotel_data, loading, hotel_error, notifier };
+  
 }
 
 export default connect(mapStateToProps, { fetchHotels })(AllHotels);
