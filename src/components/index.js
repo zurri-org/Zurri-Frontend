@@ -57,11 +57,11 @@ class MainApp extends Component {
             <Switch>
               <Router history={history}>
                 <Route exact path="/" component={HomePage} />
-                <PrivateRoute exact path="/allHotels" component={AllHotels} />
+                <Route exact path="/allHotels" component={AllHotels} />
                 <PrivateRoute exact path="/hotel" component={Hotel} />
                 <PrivateRoute exact path="/facilities" component={Facilities} />
                 <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
-                <PrivateRoute exact path="/flights" component={Flights} />
+                <Route exact path="/flights" component={Flights} />
                 <Route exact path="/contactUs" component={ContactUs} />
                 <Route exact path="/aboutpage" component={Aboutpage} />
                 {/* <Route exact path="*" component={NotFound} /> */}
