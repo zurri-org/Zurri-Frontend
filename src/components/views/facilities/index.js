@@ -16,7 +16,7 @@ const Facilities = () => {
             <Card style={{ width: '30rem'}}>
                 <Card.Body>
                     <Card.Title>Safe to visit</Card.Title>
-                    <img src={CardImage} className="cardImage"/>
+                    <img src={CardImage} className="cardImage" alt="visit safe"/>
                 </Card.Body>
             </Card>
             <div className="cardText">
@@ -72,7 +72,8 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>Fitness</Card.Title>
                         <Card.Text>
-                        Time for today's workout? We welcome you to our brand-new fitness which is located on the 4th floor. The room is about 60 square meters and available for all our guests.
+                        Time for today's workout? We welcome you to our brand-new fitness which is located on 
+                        the 4th floor. The room is about 60 square meters and available for all our guests.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -91,9 +92,11 @@ const Facilities = () => {
                     <Card.Body>
                         <Card.Title>Concierge Services</Card.Title>
                         <Card.Text>
-                        If you are in doubt about where to eat during your visit at Zurri Hotels, do not fear. By contacting the hotel reception our competent personnel can guide you to many exciting and great "hidden" eateries.
-
-If you prefer more of the night life and a couple of drinks out on the town, we are just as well-prepared. 
+                        If you are in doubt about where to eat during your visit at Zurri Hotels, 
+                        do not fear. By contacting the hotel reception our competent personnel can 
+                        guide you to many exciting and great "hidden" eateries.
+                        If you prefer more of the night life and a couple of drinks out on the town, 
+                        we are just as well-prepared. 
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -108,7 +111,7 @@ If you prefer more of the night life and a couple of drinks out on the town, we 
                     <Card.Body>
                         <Card.Title>Transportation service</Card.Title>
                         <Card.Text>
-                        If you would like a private transfer or sight-seeing, please contact the hotel directly.{' '}
+                            If you would like a private transfer or sight-seeing, please contact the hotel directly.{' '}
                         </Card.Text>
                     </Card.Body>
                       <Card.Footer>
@@ -123,17 +126,16 @@ If you prefer more of the night life and a couple of drinks out on the town, we 
                     <Card.Body>
                         <Card.Title>In-Room Services</Card.Title>
                         <Card.Text>
-                        As a guest at Zurri Hotels, you fall asleep behind hotel walls that cherish Danish design and retro phenomena – the ones that have passed through the nostalgic eye of a needle and once again found the way to our homes and hearts.
+                        As a guest at Zurri Hotels, you fall asleep behind hotel walls that cherish Danish design 
+                        and retro phenomena – the ones that have passed through the nostalgic eye of a needle and 
+                        once again found the way to our homes and hearts.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"></small>
                     </Card.Footer>
                     </Card>
-                    
                     </CardGroup>
-                    
-                    
         </Container>
     )
 }
