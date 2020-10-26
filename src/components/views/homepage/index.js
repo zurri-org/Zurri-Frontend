@@ -270,7 +270,7 @@ const HomePage = () => {
           </Row>
         </Col>
       </Row>
-
+      
       <Row className="justify-content-center m-5">
         <Col md={12} className="text-center mb-3">
           <h2>Most Visted Places</h2>
