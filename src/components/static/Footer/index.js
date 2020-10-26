@@ -15,29 +15,29 @@ class Footer extends Component{
         <Row>
           <Col sm>
           <ul className="list-unstyled" >
-          <li><a href="/">Privacy policy</a></li>
-          <li><a href="/">Terms of use</a></li>
-          <li><a href="/">Site map</a></li>
+          <li><a href="/aboutpage">About Us</a></li>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/">Careers</a></li>
         </ul>
           </Col>
           <Col sm>
           <ul className="list-unstyled" >
-          <li><a href="/">Privacy policy</a></li>
-          <li><a href="/">Terms of use</a></li>
-          <li><a href="/">Site map</a></li>
+          <li><a href="/allhotels">Top Hotels</a></li>
+          <li><a href="/flights">Top Destinations</a></li>
+          <li><a href="/">Plan your trip</a></li>
         </ul>
           </Col>
           <Col sm>
           <ul className="list-unstyled" >
-          <li><a href="/">Privacy policy</a></li>
-          <li><a href="/">Terms of use</a></li>
-          <li><a href="/">Site map</a></li>
+          <li><a href="/">FAQS</a></li>
+          <li><a href="/">Zurri Booking</a></li>
+          <li><a href="/">Uganda Airlines</a></li>
         </ul>
           </Col>
           </Row>
           </Container>
         <div className="footer-bottom mt-3">
-          <p id="copyright" className="text-centre"> &copy; {new Date().getFullYear()} figma inc. All rights reserved</p></div>
+          <p id="copyright" className="text-centre"> &copy; {new Date().getFullYear()} Zurri. All rights reserved</p></div>
       </div>
     </footer>
     );
