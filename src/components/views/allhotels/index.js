@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Row, Form, Button, Col, Container, Jumbotron, Card } from "react-bootstrap";
 import { fetchHotels } from "../../../actions/hotelsActions";
-import hotelImage from "../../../assets/img/bg1.jpg";
-// import HotelType from "./hotelType";
+import HotelType from "./hotelType";
 const AllHotels = ({
   hotel_data,
   loading,
@@ -14,18 +13,18 @@ const AllHotels = ({
   useEffect(() => {
     fetchHotels();
   }, [fetchHotels]);
-  // const appartments = [
-  //   { name: "Arsenal Suits" },
-  //   { name: "Chelsea Suits" },
-  //   { name: "Manchester United Suits" },
-  // ];
-  console.log(hotel_data)
-  console.log(hotel_data.length);
-  if(hotel_data.data !== undefined){
-  console.log('contnentsssss',hotel_data.data.hotels);
-  }else{
-    console.log("nothing");
-  }
+  const appartments = [
+    { name: "Arsenal Suits" },
+    { name: "Chelsea Suits" },
+    { name: "Manchester United Suits" },
+  ];
+  // console.log(hotel_data)
+  // console.log(hotel_data.length);
+  // if(hotel_data.data !== undefined){
+  // console.log('contnentsssss',hotel_data.data.hotels);
+  // }else{
+  //   console.log("nothing");
+  // }
   return (
     <>
       <Row className="text-center d-block home-search mb-4">
@@ -100,7 +99,7 @@ const AllHotels = ({
               </Row>
             </Container>
           </section>
-          {/* <HotelType
+          <HotelType
             heading="RESORTS"
             sectionColor=""
             appartments={appartments}
@@ -109,7 +108,7 @@ const AllHotels = ({
             heading="MOTELS"
             sectionColor="rooms-color"
             appartments={appartments}
-          /> */}
+          />
         </>
       )}
     </>
