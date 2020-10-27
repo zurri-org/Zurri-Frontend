@@ -118,8 +118,8 @@ const HomePage = () => {
                           <InputGroup.Prepend>
                             <InputGroup.Text className="home-prepend font-12">
                               <i
-                                  className="fa fa-arrow-down"
-                                  aria-hidden="true"
+                                className="fa fa-arrow-down"
+                                aria-hidden="true"
                               ></i>
                             </InputGroup.Text>
                           </InputGroup.Prepend>
@@ -228,13 +228,16 @@ const HomePage = () => {
       <Row>
         <Col md={12}>
           <Row className="pr-3 m-5">
-            <Col md={5} sm={5} className="ml-auto d-flex">
+            <Col md={5} sm={5} className="ml-auto d-flex flex-column">
               <div className="text-right m-auto">
                 <h2 className="custom-color">Connecting All Ends Of </h2>
                 <h2 className="custom-color">
                   The World To <span className="home-color">Uganda</span>
                 </h2>
               </div>
+              <a href="javascript: void(0)" className="btn btn-outline-success">
+                Book a Flight
+              </a>
             </Col>
             <Col md={5} sm={5} className="mr-auto">
               <img
@@ -254,12 +257,15 @@ const HomePage = () => {
                 alt="Air Illustration"
               />
             </Col>
-            <Col md={4} sm={4} className="mr-auto d-flex">
+            <Col md={4} sm={4} className="mr-auto d-flex flex-column">
               <div className="text-left m-auto">
                 <h2 className="custom-color">Making Your Travel</h2>
                 <h2 className="custom-color">Plans Easy And</h2>
                 <h2 className="home-color">Seamless</h2>
               </div>
+              <a href="javascript: void(0)" className="btn btn-outline-success">
+                Make Hotel Reservation
+              </a>
             </Col>
           </Row>
         </Col>
@@ -330,11 +336,16 @@ const HomePage = () => {
                 alt="Air Illustration"
               />
             </Col>
-            <Col md={4} sm={4} className="mr-auto d-flex">
+            <Col md={4} sm={4} className="mr-auto d-flex flex-column">
               <div className="text-left m-auto">
                 <h2 className="custom-color">Are You Failing To Plan For</h2>
-                <h2 className="custom-color">Your Journey, Let Us <span className="home-color">Help</span></h2>
+                <h2 className="custom-color">
+                  Your Journey, Let Us <span className="home-color">Help</span>
+                </h2>
               </div>
+              <a href="javascript: void(0)" className="btn btn-outline-success">
+                Plan Your Trip With Us
+              </a>
             </Col>
           </Row>
         </Col>
