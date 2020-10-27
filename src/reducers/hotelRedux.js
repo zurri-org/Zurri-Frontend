@@ -12,17 +12,19 @@ export function hotelRedux(state = initialState, action) {
       case hotelConstants.fetch_hotels_success:
         return {
           ...state,
+          loading: "",
           hotel_data: action.payload,
         };
       case hotelConstants.fetch_hotels_fail:
         return {
           ...state,
           hotel_error: action.payload,
+          notifier: { type: "error", sms: "Error occuired, failed" },
         };
       case hotelConstants.hoteLoading:
         return {
           ...state,
-          loading: "Loading...",
+          loading: "Loading",
         };
 
       default:

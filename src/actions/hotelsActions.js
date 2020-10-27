@@ -12,6 +12,7 @@ export const fetchHotels = () => {
     dispatch(actionLoad());
 
     return api.fetchHotels().then(response => {
+      console.log(response);
       dispatch({
           type: hotelConstants.fetch_hotels_success,
           payload: response.data

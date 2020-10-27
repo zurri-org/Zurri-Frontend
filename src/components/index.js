@@ -58,9 +58,9 @@ class MainApp extends Component {
               <Router history={history}>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/allHotels" component={AllHotels} />
-                <PrivateRoute exact path="/hotel" component={Hotel} />
-                <PrivateRoute exact path="/facilities" component={Facilities} />
-                <PrivateRoute exact path="/Rooms&Rates" component={Rooms} />
+                <Route exact path="/hotel" component={Hotel} />
+                <Route exact path="/facilities" component={Facilities} />
+                <Route exact path="/Rooms&Rates" component={Rooms} />
                 <Route exact path="/flights" component={Flights} />
                 <Route exact path="/contactUs" component={ContactUs} />
                 <Route exact path="/aboutpage" component={Aboutpage} />
