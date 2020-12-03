@@ -176,6 +176,39 @@ footer {
     .initial {
         margin-left: 2rem;
     }
+    /* media query for home page max-width:992px */
+     
+    .home-section h3{
+        text-align: center;
+        color: whitesmoke;
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation-name: popin;
+        animation-delay: 3s;
+        animation-duration: 1s;
+        animation-delay: backwards;
+        transition: ease-in-out;
+
+    }
+    @keyframes popin {
+        0%{color: tomato; margin-top: 120%;}
+        25%{color: rgb(156, 137, 28); margin-top: 100%;}
+        50%{color: rgb(238, 226, 224); margin-top: 80%;}
+        
+    }
+    .arrow {
+        border: solid rgb(51, 13, 13);
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        bottom: 10%;
+        left: 49%;
+        
+      }
+      .down{
+        transform: rotate(45deg);
+    }
 }
 @media(max-width: 575px) {
     .dropdown-section > .dropdown > .dropdown-toggle::after {
@@ -187,6 +220,38 @@ footer {
     }
     .dropdown-section {
         border-left: none;
+    }
+    /* media query for home page max-width:575px */
+    .home-section h3{
+        text-align: center;
+        color: whitesmoke;
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation-name: popin;
+        animation-delay: 3s;
+        animation-duration: 1s;
+        animation-delay: backwards;
+        transition: ease-in-out;
+
+    }
+    @keyframes popin {
+        0%{color: tomato; margin-top: 120%;}
+        25%{color: rgb(156, 137, 28); margin-top: 100%;}
+        50%{color: rgb(238, 226, 224); margin-top: 80%;}
+        
+    }
+    .arrow {
+        border: solid rgb(51, 13, 13);
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        bottom: 10%;
+        left: 49%;
+        
+      }
+      .down{
+        transform: rotate(45deg);
     }
 }
 
@@ -238,14 +303,54 @@ footer {
 
 /* -----------home page css---------- */
 .home-section {
-    background-image: url('../img/bg2.jpg');
+    background-image:linear-gradient(to bottom, rgba(37, 37, 39, 0.295), rgba(14, 13, 13, 0.233)),url('../img/bg2.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #464646;
-    height: 60vh;
-    margin-top: 6rem;
+    height: 100vh;
+    margin-top: 1rem;
 }
+.home-section h3{
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 16%;
+    padding: 8%;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: popin;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    transition: ease-in-out;
+}
+@keyframes popin {
+    0%{color: tomato; margin-top: 120%;}
+    25%{color: rgb(156, 137, 28); margin-top: 100%;}
+    50%{color: rgb(238, 226, 224); margin-top: 80%;}
+    100%{color: rgb(238, 226, 224); margin-top: 70%;}
+}
+.arrow {
+    border: solid rgb(51, 13, 13);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: 10%;
+    left: 49%;
+    animation-name: blink;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    
+  }
+  @keyframes blink{
+      0%{border: solid rgb(51, 13, 13);}
+      50%{border: solid rgb(228, 220, 220);}
+      75%{border: solid rgb(23, 29, 18);}
+  }
+ 
+
 .home-card {
     border-radius: 2rem;
 }

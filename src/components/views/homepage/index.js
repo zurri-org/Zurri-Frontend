@@ -15,131 +15,14 @@ import panelImage from "../../../assets/img/panel.JPG";
 const HomePage = () => {
   return (
     <>
-      <section className="row home-section">
+      <section className="row home-section ">
+        <h3>A fusion of Tradition, Finnese and Class.
+        Connecting you to the best Places in Uganda.
+        Our Priority is Your Comfort.</h3>
+        <div className="arrow down" onClick={()=>window.scrollBy(0,200)}></div>
+      </section>
         <Container className="mt-4 d-inline">
           <Row>
-            <Col sm={5} xs={12} md={5} className="mx-auto">
-              <Card className="home-card p-4">
-                <Card.Body>
-                  <Card.Title className="text-center">
-                    Find Flights From Uganda
-                  </Card.Title>
-                  <Form>
-                    <Form.Row className="mt-2">
-                      <Col>
-                        <Form.Label className="font-13 text-mute">
-                          From:
-                        </Form.Label>
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-map-marker"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <Form.Control
-                            size="md"
-                            className="home-input custom-input"
-                            placeholder="City or Airport"
-                          />
-                        </InputGroup>
-                      </Col>
-                      <Col>
-                        <Form.Label className="font-13 text-mute">
-                          To:
-                        </Form.Label>
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-map-marker"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <Form.Control
-                            size="md"
-                            className="home-input custom-input"
-                            placeholder="City or Airport"
-                          />
-                        </InputGroup>
-                      </Col>
-                    </Form.Row>
-                    <Form.Row className="mt-2">
-                      <Col>
-                        <Form.Label className="font-13 text-mute">
-                          Depart:
-                        </Form.Label>
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-calendar"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <Form.Control
-                            size="md"
-                            className="home-input custom-input"
-                            placeholder="Departure date"
-                          />
-                        </InputGroup>
-                      </Col>
-                      <Col>
-                        <Form.Label className="font-13 text-mute">
-                          Arrival:
-                        </Form.Label>
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-calendar"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <Form.Control
-                            size="md"
-                            className="home-input custom-input"
-                            placeholder="Arrival date"
-                          />
-                        </InputGroup>
-                      </Col>
-                    </Form.Row>
-                    <Form.Row className="mt-2">
-                      <Col>
-                        <Form.Label className="font-13 text-mute">
-                          Travelers:
-                        </Form.Label>
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-arrow-down"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <Form.Control
-                            className="home-input custom-input"
-                            placeholder="2, First class"
-                          />
-                        </InputGroup>
-                      </Col>
-                      <Col className="mt-2">
-                        <Button className="search-btn mt-4" size="md">
-                          {" "}
-                          Search
-                        </Button>
-                      </Col>
-                    </Form.Row>
-                  </Form>
-                </Card.Body>
-              </Card>
-            </Col>
             <Col sm={5} xs={12} md={5} className="mx-auto">
               <Card className="home-card p-4">
                 <Card.Body>
@@ -223,7 +106,7 @@ const HomePage = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      
 
       <Row>
         <Col md={12}>
@@ -235,10 +118,7 @@ const HomePage = () => {
                   The World To <span className="home-color">Uganda</span>
                 </h2>
               </div>
-              <a href="javascript: void(0)" className="btn btn-outline-success">
-                Book a Flight
-              </a>
-            </Col>
+              </Col>
             <Col md={5} sm={5} className="mr-auto">
               <img
                 src={mapImage}
