@@ -4,6 +4,9 @@ body {
 .main-container {
     min-height: 33rem;
 }
+.text-white {
+    color: white;
+}
 
 /* -------footer css-------------------------- */
 li {
@@ -392,7 +395,6 @@ footer {
 }
 .home-input {
     border: 1px solid black;
-    border-left: none;
 }
 .section-header {
     border-bottom: 3px solid #666812;
