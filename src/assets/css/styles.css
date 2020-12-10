@@ -437,6 +437,16 @@ h1 {
     background-color: #666812 !important;
     border-color: #666812;
 }
+.custom-btn-block {
+    background-color: #666812;
+    border-color: #666812;
+    border-radius: 1%;
+    color: white;
+}
+.custom-btn-block:hover {
+    background-color: #77791d;
+    border-color: #666812;
+}
 .rooms-color {
     background-color: #EFEEEE;
     margin-top: 0;

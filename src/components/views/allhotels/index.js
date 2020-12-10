@@ -35,7 +35,7 @@ const AllHotels = ({
         <Col md={6} className="mx-auto">
           <Form inline className="mx-auto search-form mt-4">
             <Form.Control
-              className="mr-sm-2 mb-2 no-border-radius"
+              className="mr-sm-2 mb-2 custom-input home-input"
               id="search"
               placeholder="Find Hotel, Resort, Hostel,......"
               size="lg"
