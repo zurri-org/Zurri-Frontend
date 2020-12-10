@@ -19,7 +19,7 @@ const HomePage = () => {
         <h3>A fusion of Tradition, Finnese and Class.
         Connecting you to the best Places in Uganda.
         Our Priority is Your Comfort.</h3>
-        <div className="arrow down" onClick={()=>window.scrollBy(0,200)}></div>
+        <div className="arrow down text-white" onClick={()=>window.scrollBy(0,200)}></div>
       </section>
         <Container className="mt-4 d-inline">
           <Row>
@@ -32,69 +32,16 @@ const HomePage = () => {
                   <Form>
                     <Form.Row className="mt-2">
                       <Col>
-                        <Form.Label className="font-13 text-mute">
-                          Checkin:
-                        </Form.Label>
                         <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-calendar"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
                           <Form.Control
                             size="md"
-                            className="home-input custom-input"
-                            placeholder="Check in date"
-                          />
-                        </InputGroup>
-                      </Col>
-                      <Col>
-                        <Form.Label className="font-13 text-mute">
-                          Checkout:
-                        </Form.Label>
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-calendar"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <Form.Control
-                            size="md"
-                            className="home-input custom-input"
-                            placeholder="Check out date"
-                          />
-                        </InputGroup>
-                      </Col>
-                    </Form.Row>
-                    <Form.Row className="mt-2">
-                      <Col>
-                        <Form.Label className="font-13 text-mute">
-                          Guests:
-                        </Form.Label>
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text className="home-prepend font-12">
-                              <i
-                                className="fa fa-location-arrow"
-                                aria-hidden="true"
-                              ></i>
-                            </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <Form.Control
-                            size="md"
-                            className="home-input custom-input"
-                            placeholder="Guests"
+                            className="home-input mt-3 custom-input"
+                            placeholder="Search by district.."
                           />
                         </InputGroup>
                       </Col>
                       <Col className="mt-2">
-                        <Button className="search-btn mt-4" size="md">
+                        <Button className="search-btn mt-2" size="md">
                           {" "}
                           Search
                         </Button>

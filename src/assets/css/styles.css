@@ -4,6 +4,9 @@ body {
 .main-container {
     min-height: 33rem;
 }
+.text-white {
+    color: white;
+}
 
 /* -------footer css-------------------------- */
 li {
@@ -392,7 +395,6 @@ footer {
 }
 .home-input {
     border: 1px solid black;
-    border-left: none;
 }
 .section-header {
     border-bottom: 3px solid #666812;
@@ -433,6 +435,16 @@ h1 {
 .custom-btn:hover {
     color: #fff;
     background-color: #666812 !important;
+    border-color: #666812;
+}
+.custom-btn-block {
+    background-color: #666812;
+    border-color: #666812;
+    border-radius: 1%;
+    color: white;
+}
+.custom-btn-block:hover {
+    background-color: #77791d;
     border-color: #666812;
 }
 .rooms-color {
