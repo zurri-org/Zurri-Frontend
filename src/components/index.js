@@ -14,6 +14,8 @@ const Aboutpage = lazy(() => import("./views/aboutpage"));
 const ContactUs = lazy(() => import("./views/contactus"));
 const Rooms = lazy(() => import("./views/rooms&rates"));
 const Flights = lazy(() => import ("./views/flight"));
+const SearchLandingPage =  lazy(() => import ("./views/searchLandingPage"));
+
 // const NotFound = lazy(() => import("./views/notFound"));
 
 //for skipping authentication for development uncomment the line below.
@@ -64,6 +66,8 @@ class MainApp extends Component {
                 <Route exact path="/flights" component={Flights} />
                 <Route exact path="/contactUs" component={ContactUs} />
                 <Route exact path="/aboutpage" component={Aboutpage} />
+                <Route exact path="/searchLandingPage" component={SearchLandingPage} />
+
                 {/* <Route exact path="*" component={NotFound} /> */}
               </Router>
             </Switch>

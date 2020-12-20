@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState} from "react";
 import { connect } from "react-redux";
 import { Row, Form, Button, Col, Container, Jumbotron, Card } from "react-bootstrap";
 import { fetchHotels } from "../../../actions/hotelsActions";
@@ -9,6 +9,7 @@ const AllHotels = ({
   hotel_error,
   notifier,
   fetchHotels,
+  props
 }) => {
   useEffect(() => {
     fetchHotels();
@@ -25,6 +26,26 @@ const AllHotels = ({
   // }else{
   //   console.log("nothing");
   // }
+  const [field, setField] = useState("");
+    const [error, setError] = useState(false);
+    //let [myroute, setRoute] = React.useState("/");
+    const handleField = (e) =>{
+      setField(e.target.value);
+      setError(false);
+    } 
+    const handleRoute = () => {
+      if (field.length>4){
+        //setRoute('/searchLandingPage');
+        props.history.push("/searchLandingPage")
+        
+      }
+      else{
+        setError(true);
+        alert("search bar cannot be empty")
+       
+        
+      }
+    }
   return (
     <>
       <Row className="text-center d-block home-search mb-4">
@@ -39,10 +60,18 @@ const AllHotels = ({
               id="search"
               placeholder="Find Hotel, Resort, Hostel,......"
               size="lg"
+              value={field}
+                            style={{borderColor:error?"red":"black"}}
+                            onChange={(e)=>{
+                              handleField(e);
+
+                             
+                            }}
             />
             <Button
               type="submit"
               className="mb-2 custom-btn-block no-border-radius"
+              onClick={handleRoute}
               size="bg"
             >
               SEARCH

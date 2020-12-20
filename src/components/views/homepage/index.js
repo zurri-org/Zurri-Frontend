@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {
   Container,
   Row,
@@ -12,14 +12,38 @@ import mapImage from "../../../assets/img/mapsnip.JPG";
 import airImage from "../../../assets/img/airsnip.JPG";
 import panelImage from "../../../assets/img/panel.JPG";
 
-const HomePage = () => {
-  return (
-    <>
+
+const HomePage = (props) => {
+  
+    const [field, setField] = useState("");
+    const [error, setError] = useState(false);
+    //let [myroute, setRoute] = React.useState("/");
+    const handleField = (e) =>{
+      setField(e.target.value);
+      setError(false);
+    } 
+    const handleRoute = () => {
+      if (field.length>4){
+        //setRoute('/searchLandingPage');
+        props.history.push("/searchLandingPage")
+        
+      }
+      else{
+        setError(true);
+        alert("search bar cannot be empty")
+       
+        
+      }
+    }
+    
+  
+  return <>
+    
       <section className="row home-section ">
         <h3>A fusion of Tradition, Finnese and Class.
         Connecting you to the best Places in Uganda.
         Our Priority is Your Comfort.</h3>
-        <div className="arrow down text-white" onClick={()=>window.scrollBy(0,200)}></div>
+        <div className="arrow down text-white" onClick={()=>window.scrollBy(0,400)}></div>
       </section>
         <Container className="mt-4 d-inline">
           <Row>
@@ -37,14 +61,27 @@ const HomePage = () => {
                             size="md"
                             className="home-input mt-3 custom-input"
                             placeholder="Search by district.."
+                            value={field}
+                            style={{borderColor:error?"red":"black"}}
+                            onChange={(e)=>{
+                              handleField(e);
+
+                             
+                            }}
+                            
                           />
                         </InputGroup>
+                        
+                        
                       </Col>
                       <Col className="mt-2">
-                        <Button className="search-btn mt-2" size="md">
+                     
+                      <Button className="search-btn mt-2" size="md" onClick={handleRoute}>
                           {" "}
                           Search
                         </Button>
+                     
+                        
                       </Col>
                     </Form.Row>
                   </Form>
@@ -178,7 +215,7 @@ const HomePage = () => {
         </Col>
       </Row>
     </>
-  );
+
 };
 
 export default HomePage;

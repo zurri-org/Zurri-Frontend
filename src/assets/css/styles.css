@@ -60,6 +60,11 @@ footer {
 
 
 /* -----------App header css---------- */
+
+Link{
+    color: black;
+    font: 3rem;
+}
 .navbar-custom {
     height: 100px;
     background-color: white;
@@ -129,134 +134,76 @@ footer {
 .navbar-custom > .navbar-brand > img {
     width: auto;
 }
-/* @media query css */
-@media(max-width: 992px) {
-    .navbar-collapse {
-        background-color: #f5fbfb;
-        box-shadow: 2px 5px 10px #807777;
-        display: flex;
-        justify-content: center;
-    }
-    .navbar-collapse > .navbar-nav {
-        margin-left: 0 !important;
-    }
-    .nav-link {
-        font-weight: 500;
-        margin: 10px;
-    }
-    .btn-holder {
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    .other-links {
-        margin-left: 10rem !important;
-    }
-    .input-icon-custom {
-        border-color: #c5bdbd;
-        background: #c5bdbd;
-    }
-    .btn-nav {
-        font-size: 15px;
-        font-weight: 500;
-        height: 13vh;
-        width: 11rem;
-        border-radius: 0;
-        background-color: #666812;
-        border-color: #666812;
-        margin-left: 0 !important;
-    }
-    .btn-nav:hover {
-        background-color: #666812;
-        border-color: black;
-    }
-    .check-btn {
-        width: 8rem;
-        margin-left: 5px;
-    }
-    .dropdown-section > .dropdown > .dropdown-toggle::after {
-        margin-left: 0.2em;
-    }
-    .initial {
-        margin-left: 2rem;
-    }
-    /* media query for home page max-width:992px */
-     
-    .home-section h3{
-        text-align: center;
-        color: whitesmoke;
-        font-size: 1.5rem;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        animation-name: popin;
-        animation-delay: 3s;
-        animation-duration: 1s;
-        animation-delay: backwards;
-        transition: ease-in-out;
 
-    }
-    @keyframes popin {
-        0%{color: tomato; margin-top: 120%;}
-        25%{color: rgb(156, 137, 28); margin-top: 100%;}
-        50%{color: rgb(238, 226, 224); margin-top: 80%;}
-        
-    }
-    .arrow {
-        border: solid rgb(51, 13, 13);
-        border-width: 0 5px 5px 0;
-        display: inline-block;
-        padding: 10px;
-        position: absolute;
-        bottom: 10%;
-        left: 49%;
-        
-      }
-      .down{
-        transform: rotate(45deg);
-    }
-}
-@media(max-width: 575px) {
-    .dropdown-section > .dropdown > .dropdown-toggle::after {
-        margin-left: 1em;
-    }
-    .check-btn {
-        height: 65px;
-        width: 10rem;
-    }
-    .dropdown-section {
-        border-left: none;
-    }
-    /* media query for home page max-width:575px */
-    .home-section h3{
-        text-align: center;
-        color: whitesmoke;
-        font-size: 1.5rem;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        animation-name: popin;
-        animation-delay: 3s;
-        animation-duration: 1s;
-        animation-delay: backwards;
-        transition: ease-in-out;
 
-    }
-    @keyframes popin {
-        0%{color: tomato; margin-top: 120%;}
-        25%{color: rgb(156, 137, 28); margin-top: 100%;}
-        50%{color: rgb(238, 226, 224); margin-top: 80%;}
-        
-    }
-    .arrow {
-        border: solid rgb(51, 13, 13);
-        border-width: 0 5px 5px 0;
-        display: inline-block;
-        padding: 10px;
-        position: absolute;
-        bottom: 10%;
-        left: 49%;
-        
-      }
-      .down{
-        transform: rotate(45deg);
-    }
+/* Search landing page */
+.fa{
+    color:#47480b;
 }
+.Hr-line{
+    border-top: 1px solid #757d6f;
+    border-width: 2px;
+}
+.carousel-grid{
+    margin-top: 9%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.icon-grid{
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.carousel-div{
+    text-align: center;
+    margin-top: 15%;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#reveal-grid{
+   margin-top: 0;
+}
+#reveal-text{
+    padding-top: 10%;
+    padding-right: 10%;
+}
+.reveal-div{
+    padding: 5%;
+    text-align: center;
+    width: 60%;
+    background-color: #c5bdbd;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.more-btn {
+	box-shadow:inset 0px 0px 14px -3px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+	background-color:#dbe6c4;
+	border-radius:6px;
+	cursor:pointer;
+	color:#757d6f;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+.more-btn:hover {
+	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+	background-color:#9ba892;
+}
+.more-btn:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
 
 /* -----------facilities css---------- */
 .background2{
@@ -333,7 +280,7 @@ footer {
     100%{color: rgb(238, 226, 224); margin-top: 70%;}
 }
 .arrow {
-    border: solid rgb(51, 13, 13);
+    border: solid rgba(238, 221, 221, 0.692);
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 10px;
@@ -508,4 +455,197 @@ h1 {
     cursor: pointer;
     border: 1px solid #2927a0;
     color: #2927c9;
+}
+
+
+/* @media query css */
+@media(max-width: 992px) {
+    .navbar-collapse {
+        background-color: #f5fbfb;
+        box-shadow: 2px 5px 10px #807777;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse > .navbar-nav {
+        margin-left: 0 !important;
+    }
+    .nav-link {
+        font-weight: 500;
+        margin: 10px;
+    }
+    .btn-holder {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .other-links {
+        margin-left: 10rem !important;
+    }
+    .input-icon-custom {
+        border-color: #c5bdbd;
+        background: #c5bdbd;
+    }
+    .btn-nav {
+        font-size: 15px;
+        font-weight: 500;
+        height: 13vh;
+        width: 11rem;
+        border-radius: 0;
+        background-color: #666812;
+        border-color: #666812;
+        margin-left: 0 !important;
+    }
+    .btn-nav:hover {
+        background-color: #666812;
+        border-color: black;
+    }
+    .check-btn {
+        width: 8rem;
+        margin-left: 5px;
+    }
+    .dropdown-section > .dropdown > .dropdown-toggle::after {
+        margin-left: 0.2em;
+    }
+    .initial {
+        margin-left: 2rem;
+    }
+    /* seaarch landing media query*/
+    .carousel-grid{
+        margin-top: 29%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .icon-grid{
+        margin-top: 10%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+    }
+    #reveal-text{
+        padding-top: 10%;
+        padding-right: 10%;
+    }
+    .reveal-div{
+        padding: 5%;
+        text-align: center;
+        width: 80vw;
+        background-color: #c5bdbd;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #grid2{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    /* seaarch landing media query ends*/
+
+    /* media query for home page max-width:992px */
+     
+    .home-section h3{
+        text-align: center;
+        color: whitesmoke;
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation-name: popin;
+        animation-delay: 3s;
+        animation-duration: 1s;
+        animation-delay: backwards;
+        transition: ease-in-out;
+
+    }
+    @keyframes popin {
+        0%{color: tomato; margin-top: 120%;}
+        25%{color: rgb(156, 137, 28); margin-top: 100%;}
+        50%{color: rgb(238, 226, 224); margin-top: 80%;}
+        
+    }
+    .arrow {
+        border: solid rgb(221, 209, 209);
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        bottom: 10%;
+        left: 49%;
+        
+      }
+      .down{
+        transform: rotate(45deg);
+    }
+}
+@media(max-width: 575px) {
+    .dropdown-section > .dropdown > .dropdown-toggle::after {
+        margin-left: 1em;
+    }
+    .check-btn {
+        height: 65px;
+        width: 10rem;
+    }
+    .dropdown-section {
+        border-left: none;
+    }
+    /* media query for home page max-width:575px */
+    .home-section h3{
+        text-align: center;
+        color: whitesmoke;
+        margin-top: 56%;
+        font-size: 1.2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation-name: popin;
+        animation-delay: 3s;
+        animation-duration: 1s;
+        animation-delay: backwards;
+        transition: ease-in-out;
+
+    }
+    
+    @keyframes popin {
+        0%{color: tomato; margin-top: 120%;}
+        25%{color: rgb(156, 137, 28); margin-top: 100%;}
+        50%{color: rgb(238, 226, 224); margin-top: 80%;}
+        
+    }
+    .arrow {
+        border: solid rgb(214, 193, 193);
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        bottom: 10%;
+        left: 49%;
+        
+      }
+      .down{
+        transform: rotate(45deg);
+    }
+    /* seaarch landing media query 575px*/
+    .carousel-grid{
+        margin-top: 29%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .icon-grid{
+        margin-top: 10%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+    }
+    #reveal-text{
+        padding-top: 10%;
+        padding-right: 10%;
+    }
+    #grid2{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .reveal-div{
+        padding: 5%;
+        text-align: center;
+        width: 80vw;
+        background-color: #c5bdbd;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /* seaarch landing media query ends*/
 }
