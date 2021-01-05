@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import PageSection from "../../static/section";
 import AboutSection from "./aboutSection";
 
+
 const Hotel = () => {
     const appartments = [
         { name: "Arsenal Suits" },
