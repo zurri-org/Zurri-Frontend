@@ -1,6 +1,14 @@
-import React, { useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { Row, Form, Button, Col, Container, Jumbotron, Card } from "react-bootstrap";
+import {
+  Row,
+  Form,
+  Button,
+  Col,
+  Container,
+  Jumbotron,
+  Card,
+} from "react-bootstrap";
 import { fetchHotels } from "../../../actions/hotelsActions";
 import HotelType from "./hotelType";
 const AllHotels = ({
@@ -9,7 +17,7 @@ const AllHotels = ({
   hotel_error,
   notifier,
   fetchHotels,
-  props
+  props,
 }) => {
   useEffect(() => {
     fetchHotels();
@@ -19,33 +27,20 @@ const AllHotels = ({
     { name: "Chelsea Suits" },
     { name: "Manchester United Suits" },
   ];
-  // console.log(hotel_data)
-  // console.log(hotel_data.length);
-  // if(hotel_data.data !== undefined){
-  // console.log('contnentsssss',hotel_data.data.hotels);
-  // }else{
-  //   console.log("nothing");
-  // }
   const [field, setField] = useState("");
-    const [error, setError] = useState(false);
-    //let [myroute, setRoute] = React.useState("/");
-    const handleField = (e) =>{
-      setField(e.target.value);
-      setError(false);
-    } 
-    const handleRoute = () => {
-      if (field.length>4){
-        //setRoute('/searchLandingPage');
-        props.history.push("/searchLandingPage")
-        
-      }
-      else{
-        setError(true);
-        alert("search bar cannot be empty")
-       
-        
-      }
+  const [error, setError] = useState(false);
+  const handleField = (e) => {
+    setField(e.target.value);
+    setError(false);
+  };
+  const handleRoute = () => {
+    if (field.length > 4) {
+      props.history.push("/searchLandingPage");
+    } else {
+      setError(true);
+      alert("search bar cannot be empty");
     }
+  };
   return (
     <>
       <Row className="text-center d-block home-search mb-4">
@@ -61,19 +56,16 @@ const AllHotels = ({
               placeholder="Find Hotel, Resort, Hostel,......"
               size="lg"
               value={field}
-                            style={{borderColor:error?"red":"black"}}
-                            onChange={(e)=>{
-                              handleField(e);
-
-                             
-                            }}
+              style={{ borderColor: error ? "red" : "black" }}
+              onChange={(e) => {
+                handleField(e);
+              }}
             />
             <Button
               type="submit"
               className="mb-2 custom-btn-block no-border-radius"
               onClick={handleRoute}
-              size="bg"
-            >
+              size="bg">
               SEARCH
             </Button>
           </Form>
@@ -101,7 +93,7 @@ const AllHotels = ({
                         <a href="/hotel">
                           <Card.Img
                             variant="top"
-                            src={appartment.images[1].url}
+                            src={appartment.image ? appartment.image.url : null}
                           />
                         </a>
                         <Card.Body>
@@ -110,16 +102,13 @@ const AllHotels = ({
                             <br />
                             <i
                               className="mr-1 fa fa-star-o"
-                              aria-hidden="true"
-                            ></i>
+                              aria-hidden="true"></i>
                             <i
                               className="mr-1 fa fa-star-o"
-                              aria-hidden="true"
-                            ></i>
+                              aria-hidden="true"></i>
                             <i
                               className="mr-1 fa fa-star-o"
-                              aria-hidden="true"
-                            ></i>
+                              aria-hidden="true"></i>
                           </Card.Text>
                         </Card.Body>
                       </Card>
@@ -144,11 +133,10 @@ const AllHotels = ({
   );
 };
 
-const mapStateToProps = ({Hotel}) => {
+const mapStateToProps = ({ Hotel }) => {
   console.log(Hotel);
   const { hotel_data, loading, hotel_error, notifier } = Hotel;
   return { hotel_data, loading, hotel_error, notifier };
-  
-}
+};
 
 export default connect(mapStateToProps, { fetchHotels })(AllHotels);
